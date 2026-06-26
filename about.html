@@ -1,190 +1,139 @@
 <!DOCTYPE html>
 <html lang="fr">
-<head> 
-<meta charset="UTF-8"> 
-<meta name="viewport" content="width=device-width, initial-scale=1.0"> 
-<title>ABOUT</title> 
-<!-- Bootstrap 5 via CDN : feuille de style --> 
-<link 
-href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" 
-rel="stylesheet"> 
-<!-- Votre feuille de style personnelle --> 
-<link rel="stylesheet" href="css/style.css">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>À PROPOS</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="css/style.css">
 </head>
-<body> 
-<!-- Le contenu de la page sera ajoute ici --> 
-  <nav>
-        
-                    <li> <a href="index.html"></a>ACCEUIL</li>
-                    <li> <a href="freelances.html"></a>FREELANCES</li>
-                    <li> <a href="tarifs.html"></a>TARIFS</li>
-                    <li><a href="about.html"></a>A PROPOS</li>
-                    <li> <a href="contact.html"></a>CONTACT</li>
-                    <li> <a href="#Afritalent">Rejoindre Afritalent</a></li>
-    </nav>
- <section>
-    <div>
-        <div>
-            <h6>Qui sommes nous</h6>
-            <h1>Notre histoire</h1>
-            <p>Fondée en 2022, notre plateforme est née  d'un constat simple : la technologie doit simplifier le quotidien, pas la complexifier.</p>
-            <p>Ce qui a commencé comme un projet passioné entre quatre développeurs dans un garage est aujourd'hui devenu un outil incontournable utilisé par des milliers de professionnels  à travers le monde. Nous croyons en un écosystème ouvert, tansparent et résolument tourné vers l'avenir.</p>
-            <p>Chaque jour, nous repoussons les limites du possible pour vous offrir une expérience fluide, sécuriséeet constamment enrichie de nouvelles innovations.</p>
-        </div>
-        <div>
-            <img src="images.afri/images (12).jpg" alt="">
-        </div>
-    </div>
- </section>
- <!-- SECTION DEUX -->
-  <section>
-    <div>
-        <div>
-            <h2>Nos valeurs</h2>
-            <p>Les piliers qui guident chacune de nos décisions au quotidien</p>
-            <div>
-                <!-- innovations -->
-                 <div>
-                    <div>
-                        <div>
-                            <i></i>
-                        </div>
+<body>
+    <header>
+        <nav aria-label="Navigation principale">
+            <ul>
+                <li><a href="index.html">ACCUEIL</a></li>
+                <li><a href="freelances.html">FREELANCES</a></li>
+                <li><a href="tarifs.html">TARIFS</a></li>
+                <li><a href="about.html">À PROPOS</a></li>
+                <li><a href="contact.html">CONTACT</a></li>
+                <li><a href="#Afritalent">Rejoindre Afritalent</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <main class="about-page">
+        <section class="about-hero">
+            <div class="container">
+                <div class="about-hero-grid">
+                    <div class="about-text">
+                        <span>Qui sommes-nous</span>
+                        <h1>Notre histoire</h1>
+                        <p>Fondée en 2022, notre plateforme est née d'un constat simple : la technologie doit simplifier le quotidien, pas le complexifier.</p>
+                        <p>Ce qui a commencé comme un projet passionné entre quatre développeurs est aujourd'hui un outil incontournable utilisé par des milliers de professionnels à travers le monde.</p>
+                        <p>Chaque jour, nous repoussons les limites du possible pour offrir une expérience fluide, sécurisée et toujours plus innovante.</p>
+                    </div>
+                    <div class="about-image">
+                        <img src="images.afri/images (12).jpg" alt="Équipe Afritalent">
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <section class="about-values">
+            <div class="container">
+                <div class="section-header text-center">
+                    <h2>Nos valeurs</h2>
+                    <p>Des principes qui guident chacune de nos décisions.</p>
+                </div>
+                <div class="value-grid">
+                    <div class="value-card">
                         <h4>Communauté</h4>
-                        <p>Nous grandissons grâce à vos retours et co-construsons l'outil avec vous.</p>
+                        <p>Nous grandissons grâce à vos retours et co-construisons l'outil avec vous.</p>
                     </div>
-                    <!-- exelence -->
-                     <div>
-                        <div>
-                            <div>
-                                <i></i>
-                            </div>
-                            <h4>Excellence</h4>
-                            <p>Nous visons la perfection technique et un support utilisateur irréprochable </p>
-                        </div>
-                     </div>
-                 </div>
+                    <div class="value-card">
+                        <h4>Excellence</h4>
+                        <p>Nous visons l'excellence technique et un support utilisateur irréprochable.</p>
+                    </div>
+                    <div class="value-card">
+                        <h4>Transparence</h4>
+                        <p>Nos processus sont clairs, accessibles et pensés pour inspirer confiance.</p>
+                    </div>
+                </div>
             </div>
-        </div>
-    </div>
-  </section>
-  <!-- SECTION L'EQUIPE -->
-    <section>
-        <div>
-            <h2>L' équipe</h2>
-            <p>Les visages derrières la plateforme, dévoués à votre succès.</p>
-        </div>
-        <div>
-            <!-- membre 1 -->
-             <div>
-                <div>
-                    <img src="images.afri/images (13).jpg" alt="">
-                    <div>
-                        <h5>Sarah Connor</h5>
-                        <p>CEO § Co-Fondatrice</p>
-                        <div>
-                            <a href=""></a>
-                            <a href=""></a>
+        </section>
+
+        <section class="team">
+            <div class="container">
+                <div class="section-header text-center">
+                    <h2>L'équipe</h2>
+                    <p>Les visages derrière la plateforme, dévoués à votre succès.</p>
+                </div>
+                <div class="team-grid">
+                    <div class="member-card">
+                        <img src="images.afri/images (13).jpg" alt="Sarah Connor">
+                        <div class="member-info">
+                            <h5>Sarah Connor</h5>
+                            <p>CEO & Co-Fondatrice</p>
                         </div>
                     </div>
-                </div>
-             </div>
-        </div>
-        <!-- MEMBRE2 -->
-        <div>
-            <div>
-                <img src="images.afri/images (14).jpg" alt="">
-                <div>
-                    <h5>Elena Tavarez</h5>
-                    <p>Product Designers</p>
-                    <div>
-                    <a href=""></a>
-                    <a href=""></a>
+                    <div class="member-card">
+                        <img src="images.afri/images (14).jpg" alt="Elena Tavarez">
+                        <div class="member-info">
+                            <h5>Elena Tavarez</h5>
+                            <p>Product Designer</p>
+                        </div>
+                    </div>
+                    <div class="member-card">
+                        <img src="images.afri/images (15).jpg" alt="Bella Tavarez">
+                        <div class="member-info">
+                            <h5>Bella Tavarez</h5>
+                            <p>Product Designer</p>
+                        </div>
+                    </div>
+                    <div class="member-card">
+                        <img src="images.afri/imagesjj.jpg" alt="Julien Perez">
+                        <div class="member-info">
+                            <h5>Julien Perez</h5>
+                            <p>Lead Support Client</p>
+                        </div>
                     </div>
                 </div>
             </div>
-        </div>
-        <!-- menbre3 -->
-         <div>
-            <div>
-                <img src="images.afri/images (15).jpg" alt="">
-                <div>
-                    <h5>bella Tavarez</h5>
-                    <p>Product Designers</p>
-                    <div>
-                    <a href=""></a>
-                    <a href=""></a>
+        </section>
+
+        <section class="about-stats">
+            <div class="container">
+                <div class="section-header text-center">
+                    <h2>Nos chiffres clés</h2>
+                    <p>L'impact de notre croissance et de notre engagement résumé en quelques blocs.</p>
+                </div>
+                <div class="stats-grid">
+                    <div class="stat-card">
+                        <h3>120+</h3>
+                        <p>Pays couverts</p>
+                    </div>
+                    <div class="stat-card">
+                        <h3>98%</h3>
+                        <p>Taux de satisfaction</p>
+                    </div>
+                    <div class="stat-card">
+                        <h3>24/7</h3>
+                        <p>Support disponible</p>
+                    </div>
+                    <div class="stat-card">
+                        <h3>2M+</h3>
+                        <p>Requêtes par jour</p>
                     </div>
                 </div>
             </div>
-        </div>
-        <!-- menbre4 -->
-         <div>
-            <div>
-                <img src="images.afri/images (8).jpg" alt="">
-                <div>
-                    <h5>Julien Perez</h5>
-                    <p>Lead Support Client</p>
-                    <div>
-                    <a href=""></a>
-                    <a href=""></a>
-                    </div>
-                </div>
-            </div>
-        </div>
-    </section>
-    <!-- SECTION CHIFFRES CLES (BENTO GRID + JAVASCRIPT ANIME) -->
-     <section>
-        <div>
-            <h2>Nos Chiffres Clés</h2>
-            <p>L'impact de notre croissance et de notre engagement résumé en quelques blocs.</p>
-        </div>
-        <div>
-            <!-- BLOC1(principal) -->
-            <div>
-                <h3>Une expantion mondiale</h3>
-                <p>Notre plateforme s'impose comme leader du secteur grâce à une adoption ultra-rapide par les équipes modernes.</p>
-            </div>
-        </div>
-        <!-- BLOC2(Compteur) -->
-            <div>
-                <span><span>0</span>+</span>
-                <span>Pays Couverts</span>
-            </div>
-            <!-- BLOC3(VERTICAL, IMAGE OU TEXTE ALTERNATIF) -->
-             <div>
-                <i></i>
-                <div>
-                    <h4>Vitesse et accesibilité</h4>
-                    <p>Déploiements et mise à jour continus hebdomadaires</p>
-                </div>
-             </div>
-        <!-- BLOC4 (compteur Large) -->
-         <div>
-            <div>
-                <span><span>0</span>%</span>
-                <p>Taux de Satisfaction</p>
-            </div>
-            <div></div>
-             
-            <div>
-                <span><span>0</span>/7</span>
-                <p>Support disponible</p>
-            </div>
-        </div>
-        <!-- BLOQUE 5 (COMPTEUR) -->
-         <div>
-            <span><span>0</span>M</span>
-            <span>Requêtes / jour</span>
-         </div>
-     </section>
-     <footer>
-         <p>§copy rigth; Afritalent Tout les droits résérvés.</p>
-     </footer>
-<!-- Bootstrap 5 via CDN : script JavaScript --> 
-<script 
-src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"
-></script> 
-<!-- Votre script JavaScript --> 
-<script src="js/main.js"></script>
+        </section>
+    </main>
+
+    <footer>
+        <p>© Afritalent - Tous droits réservés.</p>
+    </footer>
+
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+    <script src="js/main.js"></script>
 </body>
 </html>

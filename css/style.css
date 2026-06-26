@@ -1,0 +1,1790 @@
+:root {
+    --primary-color: #0d6efd;
+    --dark-color: #212529;
+    --light-color: #f8f9fa;
+    --text-muted: #6c757d;
+}
+
+body {
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    color: var(--dark-color);
+    background-color: var(--light-color);
+    margin: 0;
+    padding: 0;
+    line-height: 1.6;
+}
+
+/* les grandes sections */
+section {
+    padding: 60px 20px;
+    max-width: 1200px;
+    margin: 0 auto;
+}
+
+h2 {
+    font-weight: 700;
+    text-align: center;
+    margin-bottom: 40px;
+}
+
+img {
+    max-width: 100%;
+    height: auto;
+}
+
+header {
+    background-color: #ffffff;
+    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+    position: sticky;
+    top: 0;
+    z-index: 1000;
+}
+
+header nav > div {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 15px 20px;
+}
+
+header img {
+    height: 40px;
+}
+
+header ul {
+    list-style: none;
+    display: flex;
+    gap: 20px;
+    margin: 0;
+    padding: 0;
+    align-items: center;
+}
+
+header ul li {
+    font-weight: 600;
+    font-size: 0.9rem;
+}
+
+header ul a {
+    text-decoration: none;
+    color: var(--dark-color);
+}
+
+header ul a:hover {
+    color: var(--primary-color);
+}
+
+header ul li:last-child a {
+    background-color: var(--primary-color);
+    color: white;
+    padding: 8px 20px;
+    border-radius: 50px;
+}
+
+header ul li:last-child a:hover {
+    background-color: #0b5ed7;
+}
+
+header button {
+    display: none;
+}
+
+section.hero {
+    text-align: left;
+}
+
+section:nth-of-type(1) h1 {
+    font-size: 2.5rem;
+    font-weight: 800;
+    margin-bottom: 20px;
+}
+
+section:nth-of-type(1) h2 {
+    font-size: 1.25em;
+    color: var(--text-muted);
+    font-weight: 400;
+    max-width: 800px;
+    margin: 0 auto 30px auto;
+}
+
+button {
+    cursor: pointer;
+    padding: 12px 30px;
+    font-weight: 600;
+    border-radius: 8px;
+    border: none;
+    transition: 0.3s;
+}
+
+section:nth-of-type(1) button:first-of-type {
+    background-color: var(--primary-color);
+    color: white;
+    margin-right: 15px;
+}
+
+section:nth-of-type(1) button:last-of-type {
+    background-color: transparent;
+    border: 2px solid var(--text-muted);
+    color: var(--dark-color);
+}
+
+section:nth-of-type(1) > img {
+    margin-top: 40px;
+    border-radius: 15px;
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.1);
+}
+section:nth-of-type(1) div:not(:first-of-type) {
+    display: inline-block;
+    margin: 20px 40px;
+    font-size: 1.1rem;
+}
+section:nth-of-type(1) div strong:first-child {
+    display: block;
+    font-size: 2rem;
+    color: var(--primary-color);
+}
+
+section.hero {
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+    justify-content: space-between;
+    gap: 40px;
+    padding: 80px 20px;
+}
+
+.hero-content,
+.hero-image {
+    flex: 1 1 320px;
+    min-width: 280px;
+}
+
+.hero-content {
+    max-width: 570px;
+}
+
+.hero-actions {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 12px;
+    margin: 30px 0;
+}
+
+.hero-actions button {
+    width: auto;
+    padding: 10px 18px;
+    font-size: 0.95rem;
+    min-width: 160px;
+}
+
+.hero-stats {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 16px;
+    margin-top: 30px;
+}
+
+.hero-stat {
+    background-color: #ffffff;
+    border-radius: 14px;
+    padding: 16px 18px;
+    flex: 1 1 160px;
+    min-width: 140px;
+    box-shadow: 0 8px 20px rgba(0, 0, 0, 0.06);
+}
+
+.hero-stat strong {
+    display: block;
+    font-size: 1.8rem;
+    margin-bottom: 6px;
+    color: var(--primary-color);
+}
+
+.hero-image img {
+    width: 100%;
+    border-radius: 20px;
+    max-width: 520px;
+}
+
+.card-grid {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 24px;
+    justify-content: space-between;
+}
+
+.card-grid article {
+    flex: 1 1 300px;
+    max-width: calc(33.333% - 16px);
+}
+
+@media (max-width: 900px) {
+    .hero {
+        padding: 60px 20px;
+    }
+
+    .card-grid article {
+        max-width: 100%;
+    }
+}
+
+   /* 4. STRUCTURE DES CARTES (Comment ça marche) */
+section:nth-of-type(2) {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    gap: 20px;
+}
+
+section:nth-of-type(2) h2 {
+    width: 100%; /* Force le titre à prendre toute la largeur */
+}
+
+article {
+    background-color: #ffffff;
+    padding: 30px;
+    border-radius: 12px;
+    flex: 1;
+    min-width: 280px; /* Aligne les cartes en dessous sur mobile */
+    box-shadow: 0 4px 6px rgba(0,0,0,0.05);
+    position: relative;
+}
+
+article span {
+    font-size: 2.5rem;
+    font-weight: 800;
+    color: #e9ecef;
+    position: absolute;
+    top: 15px;
+    right: 20px;
+}
+
+article img {
+    height: 60px;
+    margin-bottom: 20px;
+}
+
+article h3 {
+    font-size: 1.25rem;
+    margin-bottom: 10px;
+}
+
+article p {
+    color: var(--text-muted);
+    font-size: 0.95rem;
+}
+
+   /* 5. LES CATÉGORIES (Grille d'expertises) */
+section:nth-of-type(3) ul {
+    list-style: none;
+    padding: 0;
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+    gap: 15px;
+}
+
+section:nth-of-type(3) li {
+    background-color: #ffffff;
+    padding: 15px 20px;
+    border-radius: 8px;
+    border-left: 4px solid var(--primary-color);
+    font-weight: 600;
+}
+
+   /* 6. LES TÉMOIGNAGES */
+section:nth-of-type(4) > div {
+    background-color: #ffffff;
+    padding: 40px;
+    border-radius: 15px;
+    text-align: center;
+    max-width: 700px;
+    margin: 0 auto;
+    box-shadow: 0 4px 15px rgba(0,0,0,0.05);
+}
+
+blockquote {
+    font-size: 1.2rem;
+    font-style: italic;
+    margin-bottom: 20px;
+}
+
+section:nth-of-type(4) article {
+    box-shadow: none;
+    padding: 0;
+    font-weight: 600;
+    color: var(--primary-color);
+}
+
+section:nth-of-type(4) img {
+    width: 70px;
+    height: 70px;
+    border-radius: 50%;
+    margin-top: 15px;
+    object-fit: cover;
+}
+
+   /* 7. FOOTER */
+footer {
+    background-color: var(--dark-color);
+    color: #ffffff;
+    padding: 50px 20px 20px 20px;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    gap: 30px;
+}
+
+footer > div {
+    flex: 1;
+    min-width: 200px;
+}
+
+footer h3 {
+    font-size: 1.2rem;
+    margin-bottom: 20px;
+    color: #ffffff;
+}
+
+footer p, footer li {
+    color: #a0aec0;
+    font-size: 0.9rem;
+}
+
+footer ul {
+    list-style: none;
+    padding: 0;
+}
+
+footer ul li {
+    margin-bottom: 10px;
+}
+
+footer > p:last-child {
+    width: 100%;
+    text-align: center;
+    border-top: 1px solid #2d3748;
+    padding-top: 20px;
+    margin-top: 20px;
+}
+
+
+
+/* page de freelances */
+
+   /* 1. IMPORT DES POLICES (Google Fonts) */
+   
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@600;700;800&family=Open+Sans:wght@400;600&display=swap');
+
+
+   /* 2. VARIABLES CONFIGURÉES POUR LE COMMIT 3 (:root) */
+  
+:root {
+    /* Palette de couleurs */
+    --primary-color: #0d6efd;       /* Bleu principal AfriTalent */
+    --primary-hover: #0b5ed7;       /* Bleu foncé pour les hovers */
+    --dark-color: #1e293b;          /* Ardoise foncé pour les titres */
+    --light-color: #f8fafc;         /* Gris très clair pour le fond de page */
+    --text-color: #334155;          /* Gris charbon pour le texte lisible */
+    --text-muted: #64748b;          /* Gris intermédiaire pour les paragraphes */
+    --white: #ffffff;
+
+    /* Typographie */
+    --font-titles: 'Montserrat', sans-serif;
+    --font-base: 'Open Sans', sans-serif;
+
+    /* Espacements */
+    --spacing-sm: 8px;
+    --spacing-md: 16px;
+    --spacing-lg: 32px;
+    --spacing-xl: 64px;
+}
+
+
+   /* 3. RESET CSS & STYLES DE BASE */
+   
+*, *::before, *::after {
+    box-sizing: border-box;
+}
+
+html, body {
+    margin: 0;
+    padding: 0;
+    width: 100%;
+}
+
+body {
+    font-family: var(--font-base);
+    color: var(--text-color);
+    background-color: var(--light-color);
+    font-size: 16px;
+    line-height: 1.6;
+}
+
+/* Titres */
+h1, h2, h3 {
+    font-family: var(--font-titles);
+    color: var(--dark-color);
+    margin-top: 0;
+}
+
+a {
+    color: var(--primary-color);
+    text-decoration: none;
+    transition: color 0.2s ease-in-out;
+}
+
+
+   /* 4. STRUCTURE DE LA NAVBAR (Respect du Commit 3) */
+   
+header {
+    background-color: var(--white);
+    border-bottom: 1px solid #e2e8f0;
+    position: sticky;
+    top: 0;
+    z-index: 1000;
+    box-shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.05);
+}
+
+header nav {
+    display: flex;
+    justify-content: space-between; /* Aligne les éléments aux deux extrémités */
+    align-items: center;
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: var(--spacing-md);
+}
+
+/* Configuration de la liste de liens */
+header nav ul {
+    list-style: none;
+    margin: 0;
+    padding: 0;
+    display: flex;
+    align-items: center;
+    gap: var(--spacing-lg); /* Espace constant entre les liens */
+}
+
+header nav ul li a {
+    font-family: var(--font-titles);
+    font-size: 14px;
+    font-weight: 600;
+    color: var(--text-color);
+    text-transform: uppercase;
+}
+
+header nav ul li a:hover {
+    color: var(--primary-color);
+}
+
+/* Style du bouton "Rejoindre AfriTalent" */
+header nav ul li:last-child a {
+    background-color: var(--primary-color);
+    color: var(--white);
+    padding: 10px 24px;
+    border-radius: 50px;
+    text-transform: none;
+}
+
+header nav ul li:last-child a:hover {
+    background-color: var(--primary-hover);
+}
+
+
+   /* 5. CONTENU PRINCIPAL & LAYOUT DES CARTES */
+   
+main {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: var(--spacing-xl) var(--spacing-md);
+}
+
+/* Section titre principal */
+main section:first-of-type {
+    text-align: center;
+    margin-bottom: var(--spacing-xl);
+}
+
+main h1 {
+    font-size: 2.5rem;
+    font-weight: 800;
+    margin-bottom: var(--spacing-md);
+}
+
+main section:first-of-type p {
+    color: var(--text-muted);
+    font-size: 1.1rem;
+    max-width: 700px;
+    margin: 0 auto;
+}
+
+main section.hero {
+    background: linear-gradient(135deg, rgba(13,110,253,0.08), rgba(248,250,252,0.9));
+    border-radius: 28px;
+    padding: calc(var(--spacing-xl) + 20px) var(--spacing-md);
+}
+
+.hero-content {
+    max-width: 700px;
+    margin: 0 auto;
+}
+
+.hero-content h1 {
+    font-size: clamp(2.4rem, 3.4vw, 3.5rem);
+    letter-spacing: -0.02em;
+}
+
+.hero-content p {
+    color: var(--text-muted);
+    margin-top: 20px;
+    font-size: 1.05rem;
+}
+
+.feature-card {
+    display: flex;
+    flex-direction: column;
+    min-height: 100%;
+    background-color: #ffffff;
+    border-radius: 24px;
+    box-shadow: 0 18px 45px rgba(15, 23, 42, 0.08);
+    overflow: hidden;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.feature-card:hover {
+    transform: translateY(-6px);
+    box-shadow: 0 24px 60px rgba(15, 23, 42, 0.12);
+}
+
+.feature-card img {
+    width: 100%;
+    height: 220px;
+    object-fit: cover;
+    border-bottom-left-radius: 24px;
+    border-bottom-right-radius: 24px;
+}
+
+.feature-card h3 {
+    margin: var(--spacing-lg) var(--spacing-md) 12px;
+    font-size: 1.35rem;
+}
+
+.feature-card p {
+    color: var(--text-muted);
+    margin: 0 var(--spacing-md) var(--spacing-lg);
+    line-height: 1.75;
+}
+
+/* Section des articles (Grille alignée horizontalement) */
+main section:last-of-type {
+    display: flex;
+    flex-wrap: wrap;
+    gap: var(--spacing-lg);
+    justify-content: center;
+}
+
+/* Style individuel de chaque carte (article) */
+article {
+    background-color: var(--white);
+    padding: var(--spacing-lg);
+    border-radius: 12px;
+    box-shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.05);
+    flex: 1;
+    min-width: 280px; /* Largeur minimale pour forcer le responsive */
+    max-width: 360px; /* Limite la taille maximale sur grand écran */
+    text-align: center;
+}
+
+article img {
+    width: 100%;
+    height: 180px;
+    object-fit: cover; /* Recadre proprement les images sans les déformer */
+    border-radius: 8px;
+    margin-bottom: var(--spacing-md);
+}
+
+article h3 {
+    font-size: 1.2rem;
+    margin-bottom: var(--spacing-sm);
+    line-height: 1.4;
+}
+
+article p {
+    color: var(--text-muted);
+    font-size: 0.95rem;
+    margin: 0;
+}
+
+   /* 6. FOOTER */
+    
+footer {
+    background-color: var(--dark-color);
+    color: var(--white);
+    text-align: center;
+    padding: var(--spacing-lg) var(--spacing-md);
+    margin-top: var(--spacing-xl);
+}
+
+footer p {
+    margin: 0;
+    font-size: 0.9rem;
+    opacity: 0.8;
+}
+
+/* tarifs */
+
+   /* 1. IMPORT DES POLICES (Google Fonts) */
+  
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@600;700;800&family=Open+Sans:wght@400;600&display=swap');
+
+
+   /* 2. VARIABLES CONFIGURÉES POUR LE COMMIT 3 (:root) */
+   
+:root {
+    /* Palette de couleurs cohérente */
+    --primary-color: #0d6efd;       /* Bleu principal AfriTalent */
+    --primary-hover: #0b5ed7;       /* Bleu foncé pour les survol */
+    --dark-color: #1e293b;          /* Ardoise foncé pour les titres */
+    --light-color: #f8fafc;         /* Gris très clair pour le fond */
+    --text-color: #334155;          /* Gris charbon pour le texte de base */
+    --text-muted: #64748b;          /* Gris intermédiaire pour les sous-titres */
+    --white: #ffffff;
+    --accent-color: #ffc107;        /* Couleur Or/Jaune pour mettre en valeur le plan Pro */
+
+    /* Typographie */
+    --font-titles: 'Montserrat', sans-serif;
+    --font-base: 'Open Sans', sans-serif;
+
+    /* Espacements standards */
+    --spacing-sm: 8px;
+    --spacing-md: 16px;
+    --spacing-lg: 32px;
+    --spacing-xl: 64px;
+}
+
+
+   /* 3. RESET CSS & STYLES DE BASE */
+   
+*, *::before, *::after {
+    box-sizing: border-box;
+}
+
+html, body {
+    margin: 0;
+    padding: 0;
+    width: 100%;
+}
+
+body {
+    font-family: var(--font-base);
+    color: var(--text-color);
+    background-color: var(--light-color);
+    font-size: 16px;
+    line-height: 1.6;
+}
+
+h1, h2, h3 {
+    font-family: var(--font-titles);
+    color: var(--dark-color);
+    margin-top: 0;
+}
+
+/*
+   /* 4. STYLISATION DE LA NAVBAR DE BASE */
+
+nav {
+    background-color: var(--white);
+    padding: var(--spacing-md);
+    display: flex;
+    justify-content: center;
+    list-style: none;
+    gap: var(--spacing-lg);
+    border-bottom: 1px solid #e2e8f0;
+}
+
+nav li a {
+    font-family: var(--font-titles);
+    font-weight: 600;
+    font-size: 14px;
+    color: var(--text-color);
+    text-decoration: none;
+}
+
+nav li a:hover {
+    color: var(--primary-color);
+}
+
+
+   /* 5. GRILLE DES CARTES DE TARIFS (Layout principal) */
+   
+/* Section qui enveloppe les titres et les 3 blocs de tarifs */
+body > section:first-of-type {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: var(--spacing-xl) var(--spacing-md);
+    display: flex;
+    flex-wrap: wrap;
+    gap: var(--spacing-lg);
+    justify-content: center;
+}
+
+/* Forcer le premier div (contenant H1 et P) à prendre toute la largeur */
+body > section:first-of-type > div:first-child {
+    width: 100%;
+    text-align: center;
+    margin-bottom: var(--spacing-lg);
+}
+
+body > section:first-of-type > div:first-child h1 {
+    font-size: 2.5rem;
+    font-weight: 800;
+}
+
+/* Style de base pour chaque conteneur de plan */
+body > section:first-of-type > div:not(:first-child) {
+    background-color: var(--white);
+    border-radius: 16px;
+    padding: var(--spacing-lg);
+    box-shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.05);
+    flex: 1;
+    min-width: 280px;
+    max-width: 350px;
+    position: relative;
+    border: 2px solid transparent;
+}
+
+/* --- LE PLAN PRO MIS EN VALEUR --- */
+/* Repère le plan du milieu grâce à la présence du span "Populaire" */
+body > section:first-of-type > div:nth-of-type(3) {
+    border-color: var(--primary-color);
+    transform: scale(1.03); /* Rend la carte légèrement plus grande */
+}
+
+/* Le petit badge "Populaire" */
+body > section:first-of-type > div span:first-of-type {
+    background-color: var(--primary-color);
+    color: var(--white);
+    font-family: var(--font-titles);
+    font-size: 12px;
+    font-weight: 700;
+    padding: 4px 12px;
+    border-radius: 50px;
+    position: absolute;
+    top: -12px;
+    left: 50%;
+    transform: translateX(-50%);
+}
+
+/* Typographie interne aux cartes */
+h3 {
+    font-size: 1.5rem;
+    margin-bottom: var(--spacing-md);
+    text-align: center;
+}
+
+/* Zone du prix */
+div > div > span:first-of-type {
+    font-size: 2.5rem;
+    font-weight: 800;
+    color: var(--dark-color);
+}
+
+/* Listes à puces des fonctionnalités */
+ul {
+    list-style: none;
+    padding: 0;
+    margin: var(--spacing-lg) 0;
+}
+
+ul li {
+    padding: var(--spacing-sm) 0;
+    border-bottom: 1px solid #f1f5f9;
+    font-size: 0.95rem;
+}
+
+/* Boutons d'action des cartes */
+button {
+    width: 100%;
+    padding: 12px;
+    font-family: var(--font-titles);
+    font-weight: 700;
+    border: 2px solid var(--primary-color);
+    border-radius: 8px;
+    cursor: pointer;
+    background-color: transparent;
+    color: var(--primary-color);
+    transition: 0.2s ease;
+}
+
+button:hover {
+    background-color: var(--primary-color);
+    color: var(--white);
+}
+
+/* Bouton plein pour le plan Pro */
+body > section:first-of-type > div:nth-of-type(3) button {
+    background-color: var(--primary-color);
+    color: var(--white);
+}
+
+body > section:first-of-type > div:nth-of-type(3) button:hover {
+    background-color: var(--primary-hover);
+}
+
+
+   /* 6. STYLISATION DE LA SECTION FAQ (Accordéon basique) */
+   
+body > section:last-of-type {
+    max-width: 800px;
+    margin: 0 auto;
+    padding: var(--spacing-xl) var(--spacing-md);
+}
+
+body > section:last-of-type > div:first-child {
+    text-align: center;
+    margin-bottom: var(--spacing-lg);
+}
+
+/* Conteneur de chaque question */
+body > section:last-of-type > div:not(:first-child) {
+    background-color: var(--white);
+    margin-bottom: var(--spacing-md);
+    border-radius: 8px;
+    border: 1px solid #e2e8f0;
+    overflow: hidden;
+}
+
+/* Bouton de la question */
+body > section:last-of-type h2 button {
+    width: 100%;
+    text-align: left;
+    background-color: var(--white);
+    border: none;
+    color: var(--dark-color);
+    padding: var(--spacing-md);
+    font-size: 1rem;
+    font-weight: 600;
+    display: flex;
+    justify-content: space-between;
+}
+
+/* Zone de réponse */
+body > section:last-of-type div > div > div {
+    padding: var(--spacing-md);
+    background-color: #fafafa;
+    border-top: 1px solid #e2e8f0;
+    font-size: 0.95rem;
+    color: var(--text-color);
+}
+
+
+   /* 7. FOOTER */
+   
+footer {
+    background-color: var(--dark-color);
+    color: var(--white);
+    text-align: center;
+    padding: var(--spacing-lg) var(--spacing-md);
+    margin-top: var(--spacing-xl);
+}
+
+footer p {
+    margin: 0;
+    font-size: 0.9rem;
+    opacity: 0.8;
+}
+
+.contact-page {
+    padding: 40px 20px;
+}
+
+.contact-intro h1 {
+    font-size: 2.25rem;
+    margin-bottom: 12px;
+}
+
+.contact-layout {
+    display: grid;
+    grid-template-columns: 1.2fr 0.8fr;
+    gap: 40px;
+    align-items: start;
+    margin-top: 40px;
+}
+
+.contact-form,
+.contact-info {
+    background-color: #ffffff;
+    padding: 30px;
+    border-radius: 20px;
+    box-shadow: 0 15px 35px rgba(15, 23, 42, 0.08);
+}
+
+.contact-form .form-row {
+    display: grid;
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+    gap: 16px;
+}
+
+.contact-form .form-group {
+    margin-bottom: 18px;
+}
+
+.contact-form label {
+    display: block;
+    margin-bottom: 8px;
+    font-weight: 700;
+}
+
+.contact-form input,
+.contact-form select,
+.contact-form textarea {
+    width: 100%;
+    padding: 12px 14px;
+    border: 1px solid #d1d5db;
+    border-radius: 12px;
+    font-size: 0.95rem;
+    background-color: #f8fafc;
+}
+
+.contact-form textarea {
+    min-height: 140px;
+    resize: vertical;
+}
+
+.contact-form small {
+    display: block;
+    margin-top: 8px;
+    color: #6b7280;
+    font-size: 0.85rem;
+}
+
+.contact-form .form-action {
+    margin-top: 10px;
+}
+
+.contact-form button {
+    width: auto;
+    padding: 12px 24px;
+    font-size: 0.95rem;
+    background-color: var(--primary-color);
+    color: #ffffff;
+    border: none;
+    border-radius: 12px;
+}
+
+.contact-info .contact-item {
+    display: flex;
+    gap: 16px;
+    margin-top: 20px;
+    align-items: flex-start;
+}
+
+.contact-info .contact-item .icon {
+    width: 48px;
+    height: 48px;
+    background-color: #e2e8f0;
+    border-radius: 16px;
+}
+
+.contact-info h3,
+.contact-info h6 {
+    margin: 0 0 8px 0;
+}
+
+.social-section {
+    margin-top: 32px;
+}
+
+.social-links {
+    display: flex;
+    gap: 14px;
+    margin-top: 16px;
+}
+
+.social-icon {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    width: 42px;
+    height: 42px;
+    background-color: #f8fafc;
+    border-radius: 14px;
+    border: 1px solid #e2e8f0;
+}
+
+.social-icon img {
+    width: 24px;
+    height: 24px;
+    object-fit: contain;
+}
+
+.map-frame {
+    margin-top: 32px;
+}
+
+.map-frame iframe {
+    width: 100%;
+    min-height: 250px;
+    border: none;
+    border-radius: 16px;
+}
+
+@media (max-width: 900px) {
+    .contact-layout {
+        grid-template-columns: 1fr;
+    }
+
+    .contact-form .form-row {
+        grid-template-columns: 1fr;
+    }
+}
+
+.about-page {
+    background-color: #f8fbff;
+}
+
+.about-hero {
+    padding: 80px 20px 60px;
+    background: linear-gradient(135deg, rgba(13, 110, 253, 0.08), rgba(255, 255, 255, 0.96));
+}
+
+.about-hero-grid {
+    display: flex;
+    gap: 40px;
+    align-items: center;
+    flex-wrap: wrap;
+}
+
+.about-text span {
+    display: inline-block;
+    margin-bottom: 16px;
+    font-size: 0.9rem;
+    font-weight: 700;
+    color: var(--primary-color);
+    text-transform: uppercase;
+    letter-spacing: 0.12em;
+}
+
+.about-text h1 {
+    font-size: clamp(2.5rem, 3.5vw, 3.6rem);
+    line-height: 1.02;
+    margin-bottom: 24px;
+}
+
+.about-text p {
+    margin-bottom: 20px;
+    color: var(--text-muted);
+    max-width: 680px;
+    line-height: 1.8;
+}
+
+.about-image img {
+    width: 100%;
+    border-radius: 28px;
+    box-shadow: 0 24px 55px rgba(15, 23, 42, 0.08);
+}
+
+.about-values .section-header,
+.team .section-header,
+.about-stats .section-header {
+    margin-bottom: 34px;
+}
+
+.value-grid,
+.team-grid,
+.stats-grid {
+    display: grid;
+    gap: 24px;
+}
+
+.value-grid {
+    grid-template-columns: repeat(3, minmax(220px, 1fr));
+}
+
+.value-card,
+.member-card,
+.stat-card {
+    background-color: #ffffff;
+    border-radius: 24px;
+    padding: 32px;
+    box-shadow: 0 20px 45px rgba(15, 23, 42, 0.08);
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.value-card:hover,
+.member-card:hover,
+.stat-card:hover {
+    transform: translateY(-6px);
+    box-shadow: 0 28px 60px rgba(15, 23, 42, 0.12);
+}
+
+.value-card h4 {
+    font-size: 1.3rem;
+    margin-bottom: 14px;
+}
+
+.value-card p {
+    margin: 0;
+    color: var(--text-muted);
+    line-height: 1.7;
+}
+
+.team-grid {
+    grid-template-columns: repeat(4, minmax(220px, 1fr));
+}
+
+.member-card {
+    display: flex;
+    flex-direction: column;
+    overflow: hidden;
+    text-align: center;
+}
+
+.member-card img {
+    width: 100%;
+    height: 280px;
+    object-fit: cover;
+}
+
+.member-info {
+    padding: 28px 22px 22px;
+}
+
+.member-info h5 {
+    margin-bottom: 10px;
+    font-size: 1.2rem;
+}
+
+.member-info p {
+    margin: 0;
+    color: var(--text-muted);
+}
+
+.stats-grid {
+    grid-template-columns: repeat(auto-fit, minmax(180px, 1fr));
+    align-items: stretch;
+}
+
+.stat-card {
+    min-height: 180px;
+}
+
+.stat-card h3 {
+    font-size: clamp(2rem, 4vw, 2.8rem);
+    margin-bottom: 16px;
+    color: var(--primary-color);
+    word-break: break-word;
+}
+
+.stat-card p {
+    margin: 0;
+    color: var(--text-muted);
+    font-size: 0.95rem;
+    line-height: 1.7;
+}
+
+@media (max-width: 1000px) {
+    .about-hero-grid {
+        flex-direction: column;
+    }
+
+    .value-grid,
+    .team-grid,
+    .stats-grid {
+        grid-template-columns: 1fr;
+    }
+}
+
+/* about */
+
+   /* 1. IMPORT DES POLICES (Google Fonts) */
+   
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@600;700;800&family=Open+Sans:wght@400;600&display=swap');
+
+
+   /* 2. VARIABLES CONFIGURÉES POUR LE COMMIT 3 (:root) */
+:root {
+    /* Palette de couleurs */
+    --primary-color: #0d6efd;       /* Bleu principal AfriTalent */
+    --primary-hover: #0b5ed7;       /* Bleu foncé pour les hovers */
+    --dark-color: #1e293b;          /* Ardoise foncé pour les titres */
+    --light-color: #f8fafc;         /* Gris très clair pour le fond de page */
+    --text-color: #334155;          /* Gris charbon pour le texte lisible */
+    --text-muted: #64748b;          /* Gris intermédiaire pour les paragraphes */
+    --white: #ffffff;
+
+    /* Typographie */
+    --font-titles: 'Montserrat', sans-serif;
+    --font-base: 'Open Sans', sans-serif;
+
+    /* Espacements standards */
+    --spacing-sm: 8px;
+    --spacing-md: 16px;
+    --spacing-lg: 32px;
+    --spacing-xl: 64px;
+}
+
+
+   /* 3. RESET CSS & STYLES DE BASE */
+   
+*, *::before, *::after {
+    box-sizing: border-box;
+}
+
+html, body {
+    margin: 0;
+    padding: 0;
+    width: 100%;
+}
+
+body {
+    font-family: var(--font-base);
+    color: var(--text-color);
+    background-color: var(--light-color);
+    font-size: 16px;
+    line-height: 1.6;
+}
+
+h1, h2, h3, h4, h5, h6 {
+    font-family: var(--font-titles);
+    color: var(--dark-color);
+    margin-top: 0;
+}
+
+
+   /* 4. STYLISATION DE LA NAVBAR DE BASE */
+   
+nav {
+    background-color: var(--white);
+    padding: var(--spacing-md);
+    display: flex;
+    justify-content: center;
+    list-style: none;
+    gap: var(--spacing-lg);
+    border-bottom: 1px solid #e2e8f0;
+}
+
+nav li a {
+    font-family: var(--font-titles);
+    font-weight: 600;
+    font-size: 14px;
+    color: var(--text-color);
+    text-decoration: none;
+}
+
+nav li a:hover {
+    color: var(--primary-color);
+}
+
+
+   /* 5. SECTION 1 : NOTRE HISTOIRE (Mise en page à deux colonnes) */
+   
+body > section:nth-of-type(1) {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: var(--spacing-xl) var(--spacing-md);
+}
+
+/* Flexbox pour mettre le texte à gauche et l'image à droite */
+body > section:nth-of-type(1) > div {
+    display: flex;
+    flex-wrap: wrap;
+    gap: var(--spacing-xl);
+    align-items: center;
+}
+
+body > section:nth-of-type(1) > div > div:first-of-type {
+    flex: 1;
+    min-width: 300px;
+}
+
+body > section:nth-of-type(1) > div > div:last-of-type {
+    flex: 1;
+    min-width: 300px;
+    text-align: center;
+}
+
+h6 {
+    color: var(--primary-color);
+    text-transform: uppercase;
+    letter-spacing: 1px;
+    margin-bottom: var(--spacing-sm);
+}
+
+h1 {
+    font-size: 2.5rem;
+    font-weight: 800;
+    margin-bottom: var(--spacing-md);
+}
+
+body > section:nth-of-type(1) img {
+    border-radius: 12px;
+    box-shadow: 0 10px 20px rgba(0,0,0,0.05);
+}
+
+
+   /* 6. SECTION 2 : NOS VALEURS (Blocs simples alignés) */
+   
+body > section:nth-of-type(2) {
+    background-color: var(--white);
+    padding: var(--spacing-xl) var(--spacing-md);
+}
+
+body > section:nth-of-type(2) > div {
+    max-width: 1200px;
+    margin: 0 auto;
+    text-align: center;
+}
+
+/* Conteneur des blocs de valeurs */
+body > section:nth-of-type(2) .values-container,
+body > section:nth-of-type(2) > div > div > div {
+    display: flex;
+    flex-wrap: wrap;
+    gap: var(--spacing-lg);
+    justify-content: center;
+    margin-top: var(--spacing-xl);
+}
+
+/* Chaque bloc de valeur individuel */
+body > section:nth-of-type(2) h4 {
+    font-size: 1.25rem;
+    margin-bottom: var(--spacing-sm);
+}
+
+
+   /* 7. SECTION 3 : L'ÉQUIPE (Trombinoscope / Grille de cartes) */
+   
+body > section:nth-of-type(3) {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: var(--spacing-xl) var(--spacing-md);
+    display: flex;
+    flex-wrap: wrap;
+    gap: var(--spacing-lg);
+    justify-content: center;
+}
+
+/* Forcer le bloc titre de l'équipe à prendre toute la largeur */
+body > section:nth-of-type(3) > div:first-of-type {
+    width: 100%;
+    text-align: center;
+    margin-bottom: var(--spacing-lg);
+}
+
+/* Cartes des membres de l'équipe */
+body > section:nth-of-type(3) > div:not(:first-of-type) {
+    background-color: var(--white);
+    border-radius: 12px;
+    overflow: hidden;
+    box-shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.05);
+    flex: 1;
+    min-width: 240px;
+    max-width: 280px;
+}
+
+body > section:nth-of-type(3) img {
+    width: 100%;
+    height: 250px;
+    object-fit: cover; /* Recadre joliment le portrait sans le déformer */
+}
+
+body > section:nth-of-type(3) h5 {
+    font-size: 1.1rem;
+    margin: var(--spacing-md) 0 4px 0;
+    text-align: center;
+}
+
+body > section:nth-of-type(3) p {
+    color: var(--text-muted);
+    font-size: 0.9rem;
+    text-align: center;
+    margin-bottom: var(--spacing-md);
+}
+
+
+   /* 8. SECTION 4 : CHIFFRES CLÉS (Structure Bento Grid basique)
+    */
+body > section:nth-of-type(4) {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: var(--spacing-xl) var(--spacing-md);
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+    gap: var(--spacing-md);
+}
+
+/* Le titre de la section prend toute la largeur de la grille bento */
+body > section:nth-of-type(4) > div:first-of-type {
+    grid-column: 1 / -1;
+    text-align: center;
+    margin-bottom: var(--spacing-md);
+}
+
+/* Boîtes génériques de la Bento Grid */
+body > section:nth-of-type(4) > div:not(:first-of-type) {
+    background-color: var(--white);
+    padding: var(--spacing-lg);
+    border-radius: 12px;
+    box-shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.05);
+}
+
+/* Blocs contenant les compteurs (Grands Chiffres) */
+body > section:nth-of-type(4) span span {
+    font-family: var(--font-titles);
+    font-size: 2.5rem;
+    font-weight: 800;
+    color: var(--primary-color);
+    display: inline-block;
+}
+
+
+   /* 9. FOOTER */
+   
+footer {
+    background-color: var(--dark-color);
+    color: var(--white);
+    text-align: center;
+    padding: var(--spacing-lg) var(--spacing-md);
+    margin-top: var(--spacing-xl);
+}
+
+footer p {
+    margin: 0;
+    font-size: 0.9rem;
+    opacity: 0.8;
+}
+
+/* contact */
+/* 
+   /* 1. IMPORT DES POLICES (Google Fonts) */
+   
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@600;700;800&family=Open+Sans:wght@400;600&display=swap');
+
+
+   /* 2. VARIABLES CONFIGURÉES POUR LE COMMIT 3 (:root) */
+   
+:root {
+    /* Palette de couleurs AfriTalent */
+    --primary-color: #0d6efd;       /* Bleu principal */
+    --primary-hover: #0b5ed7;       /* Bleu survol */
+    --dark-color: #1e293b;          /* Ardoise foncé pour les titres */
+    --light-color: #f8fafc;         /* Gris très clair pour le fond */
+    --text-color: #334155;          /* Gris charbon pour le texte de base */
+    --text-muted: #64748b;          /* Gris pour les sous-titres */
+    --white: #ffffff;
+    --success-bg: #d1e7dd;          /* Vert clair pour l'alerte succès */
+    --success-text: #0f5132;
+    --danger-text: #dc3545;         /* Rouge pour les messages de validation d'erreur */
+
+    /* Typographie */
+    --font-titles: 'Montserrat', sans-serif;
+    --font-base: 'Open Sans', sans-serif;
+
+    /* Espacements standards */
+    --spacing-sm: 8px;
+    --spacing-md: 16px;
+    --spacing-lg: 32px;
+    --spacing-xl: 64px;
+}
+
+
+   /* 3. RESET CSS & STYLES DE BASE */
+   
+*, *::before, *::after {
+    box-sizing: border-box;
+}
+
+html, body {
+    margin: 0;
+    padding: 0;
+    width: 100%;
+}
+
+body {
+    font-family: var(--font-base);
+    color: var(--text-color);
+    background-color: var(--light-color);
+    font-size: 16px;
+    line-height: 1.6;
+}
+
+h1, h3, h5, h6 {
+    font-family: var(--font-titles);
+    color: var(--dark-color);
+    margin-top: 0;
+}
+
+/* Fix pour vos balises de liens mal fermées dans le HTML original */
+nav li a {
+    text-decoration: none;
+    color: inherit;
+}
+
+
+   /* 4. STYLISATION DE LA NAVBAR */
+   
+nav {
+    background-color: var(--white);
+    padding: var(--spacing-md);
+    display: flex;
+    justify-content: center;
+    list-style: none;
+    gap: var(--spacing-lg);
+    border-bottom: 1px solid #e2e8f0;
+}
+
+nav li {
+    font-family: var(--font-titles);
+    font-weight: 600;
+    font-size: 14px;
+    color: var(--text-color);
+    cursor: pointer;
+}
+
+nav li:hover {
+    color: var(--primary-color);
+}
+
+   /* 5. EN-TÊTE DE PAGE & ALERTE DE SUCCÈS */
+/* Premier conteneur après la navbar */
+body > div:first-of-type {
+    max-width: 800px;
+    margin: 0 auto;
+    padding: var(--spacing-xl) var(--spacing-md) 0 var(--spacing-md);
+    text-align: center;
+}
+
+body > div:first-of-type h1 {
+    font-size: 2.5rem;
+    font-weight: 800;
+}
+
+/* Boîte d'alerte succès (cachée par défaut ou stylisée de base) */
+body > div:first-of-type > div:last-of-type {
+    background-color: var(--success-bg);
+    color: var(--success-text);
+    padding: var(--spacing-md);
+    border-radius: 8px;
+    margin-top: var(--spacing-lg);
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    text-align: left;
+    border: 1px solid #badbcc;
+}
+
+body > div:first-of-type > div:last-of-type h5 {
+    color: var(--success-text);
+    margin-bottom: 4px;
+}
+
+body > div:first-of-type > div:last-of-type p {
+    margin: 0;
+    font-size: 0.9rem;
+}
+
+body > div:first-of-type > div:last-of-type button {
+    background: transparent;
+    border: none;
+    font-size: 1.2rem;
+    cursor: pointer;
+}
+
+
+   /* 6. ZONE FORMULAIRE (Colonne de gauche) */
+   
+/* Conteneur global qui englobe le formulaire */
+body > div:nth-of-type(2) {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: var(--spacing-lg) var(--spacing-md);
+    display: inline-block;
+    width: 60%;
+    vertical-align: top;
+}
+
+/* Carte blanche autour du formulaire */
+body > div:nth-of-type(2) > div {
+    background-color: var(--white);
+    padding: var(--spacing-lg);
+    border-radius: 12px;
+    box-shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.05);
+}
+
+form h3 {
+    margin-bottom: var(--spacing-lg);
+}
+
+/* Éléments du formulaire (Inputs, Select, Textarea) */
+form label {
+    display: block;
+    font-family: var(--font-titles);
+    font-weight: 600;
+    font-size: 0.9rem;
+    margin-bottom: var(--spacing-sm);
+    text-transform: capitalize;
+}
+
+form input[type="text"],
+form select,
+form textarea {
+    width: 100%;
+    padding: 12px;
+    border: 1px solid #cbd5e1;
+    border-radius: 6px;
+    font-family: var(--font-base);
+    font-size: 100%;
+    background-color: var(--light-color);
+    margin-bottom: 4px;
+    transition: border-color 0.2s;
+}
+
+form input:focus,
+form select:focus,
+form textarea:focus {
+    outline: none;
+    border-color: var(--primary-color);
+}
+
+form textarea {
+    min-height: 120px;
+    resize: vertical;
+}
+
+/* Texte d'erreur / consignes sous les champs (cachés par défaut pour le comportement dynamique) */
+form form div div, 
+form div > div:last-child {
+    font-size: 0.8rem;
+    color: var(--danger-text);
+    margin-bottom: var(--spacing-md);
+}
+
+/* Bouton envoyer */
+form button {
+    background-color: var(--primary-color);
+    color: var(--white);
+    border: none;
+    padding: 12px var(--spacing-lg);
+    font-family: var(--font-titles);
+    font-weight: 700;
+    border-radius: 6px;
+    cursor: pointer;
+    transition: background 0.2s;
+}
+
+form button:hover {
+    background-color: var(--primary-hover);
+}
+
+   /* 7. ZONE INFOS & COORDONNÉES (Colonne de droite) */
+   
+/* Cible tous les blocs de coordonnées qui suivent le formulaire principal */
+body > div:not(:first-of-type):not(:nth-of-type(2)) {
+    display: inline-block;
+    width: 35%;
+    margin-left: 4%;
+    vertical-align: top;
+    background-color: var(--white);
+    padding: var(--spacing-md);
+    margin-bottom: var(--spacing-md);
+    border-radius: 12px;
+    box-shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.05);
+}
+
+/* Alignement icône + texte dans les coordonnées */
+body > div:not(:first-of-type):not(:nth-of-type(2)) {
+    display: flex;
+    gap: var(--spacing-md);
+    align-items: center;
+}
+
+body > div:not(:first-of-type):not(:nth-of-type(2)) h6 {
+    margin-bottom: 4px;
+    font-size: 1rem;
+}
+
+body > div:not(:first-of-type):not(:nth-of-type(2)) p {
+    margin: 0;
+    color: var(--text-muted);
+    font-size: 0.95rem;
+}
+
+   /* 8. RÉSEAUX SOCIAUX & MAPS (Bas de page) */
+/* Titre suivez-nous */
+body > h6 {
+    text-align: center;
+    margin-top: var(--spacing-lg);
+    font-size: 1.1rem;
+}
+
+/* Conteneur des icônes réseaux sociaux */
+body > h6 + div {
+    display: flex;
+    justify-content: center;
+    gap: var(--spacing-md);
+    margin-bottom: var(--spacing-lg);
+}
+
+body > h6 + div a {
+    color: var(--dark-color);
+    font-size: 1.5rem;
+    transition: color 0.2s;
+}
+
+body > h6 + div a:hover {
+    color: var(--primary-color);
+}
+
+/* Conteneur de la carte Google Maps */
+body > div:last-of-type {
+    max-width: 1200px;
+    margin: 0 auto var(--spacing-xl) auto;
+    padding: 0 var(--spacing-md);
+    width: 100%;
+}
+
+body > div:last-of-type iframe {
+    width: 100%;
+    height: 350px;
+    border: none;
+    border-radius: 12px;
+    box-shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.05);
+    background-color: #e2e8f0; /* Fond neutre en attendant le chargement */
+}
+
+/* Separateur */
+hr {
+    border: 0;
+    height: 1px;
+    background: #e2e8f0;
+    max-width: 1200px;
+    margin: var(--spacing-lg) auto;
+}
+
+   /* 9. FOOTER */
+footer {
+    background-color: var(--dark-color);
+    color: var(--white);
+    text-align: center;
+    padding: var(--spacing-lg) var(--spacing-md);
+    margin-top: var(--spacing-xl);
+}
+
+footer p {
+    margin: 0;
+    font-size: 0.9rem;
+    opacity: 0.8;
+}
+
+   /* 10. RESPONSIVE SIMPLE (Passage sur une seule colonne pour mobile) */
+@media (max-width: 768px) {
+    body > div:nth-of-type(2),
+    body > div:not(:first-of-type):not(:nth-of-type(2)) {
+        width: 100%;
+        margin-left: 0;
+        display: flex;
+        flex-direction: column;
+    }
+}
