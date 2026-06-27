@@ -65,4 +65,54 @@ document.addEventListener('DOMContentLoaded', () => {
 
   window.addEventListener('scroll', updateNavbarScroll);
   updateNavbarScroll();
+
+  // ==========================================
+  // 1. ANIMATION DES COMPTEURS DE STATISTIQUES
+  // ==========================================
+  const counters = document.querySelectorAll('.stat-number');
+  const counterSpeed = 200;
+
+  const animateCounter = (counter) => {
+    const target = +counter.getAttribute('data-target');
+    const suffix = counter.getAttribute('data-suffix') || '';
+    const current = +counter.dataset.current || 0;
+    const increment = Math.max(1, Math.ceil(target / counterSpeed));
+    const nextValue = current + increment;
+
+    if (nextValue < target) {
+      counter.dataset.current = nextValue;
+      counter.innerText = `${nextValue}${suffix}`;
+      setTimeout(() => animateCounter(counter), 20);
+    } else {
+      counter.dataset.current = target;
+      counter.innerText = `${target}${suffix}`;
+    }
+  };
+
+  const counterObserver = new IntersectionObserver((entries, observer) => {
+    entries.forEach(entry => {
+      if (entry.isIntersecting) {
+        animateCounter(entry.target);
+        observer.unobserve(entry.target);
+      }
+    });
+  }, { threshold: 0.5 });
+
+  counters.forEach(counter => counterObserver.observe(counter));
+
+  // ==========================================
+  // 2. ANIMATIONS FADE-IN DES SECTIONS
+  // ==========================================
+  const fadeSections = document.querySelectorAll('.fade-in-section');
+
+  const fadeObserver = new IntersectionObserver((entries, observer) => {
+    entries.forEach(entry => {
+      if (entry.isIntersecting) {
+        entry.target.classList.add('is-visible');
+        observer.unobserve(entry.target);
+      }
+    });
+  }, { threshold: 0.15 });
+
+  fadeSections.forEach(section => fadeObserver.observe(section));
 });

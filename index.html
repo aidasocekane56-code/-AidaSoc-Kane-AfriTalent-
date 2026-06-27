@@ -10,9 +10,7 @@
 </head>
 <body>
 
-         <!-- 1. NAVBAR RESPONSIVE FIXE (Menu Hamburger) -->
-         
-    <header>
+         <header>
         <nav class="navbar navbar-expand-md navbar-light bg-white border-bottom fixed-top" aria-label="Navigation principale">
             <div class="container">
                 <a class="navbar-brand fw-bold text-primary d-flex align-items-center gap-2" href="index.html">
@@ -32,8 +30,8 @@
                         <li class="nav-item"><a class="nav-link" href="contact.html">CONTACT</a></li>
                         <li class="nav-item"><a class="btn btn-primary btn-sm text-white px-3 mt-2 mt-md-0" href="#">Rejoindre AfriTalent</a></li>
                         <button id="theme-toggle" class="btn btn-link text-secondary fs-5 p-0 me-3" aria-label="Changer de thème">
-    <i class="bi bi-moon-fill" id="theme-toggle-icon"></i>
-</button>
+                            <i class="bi bi-moon-fill" id="theme-toggle-icon"></i>
+                        </button>
                     </ul>
                 </div>
             </div>
@@ -41,9 +39,9 @@
     </header>
 
 <main>
-    <section class="hero">
+    <section class="hero fade-in-section">
         <div class="hero-content">
-            <h1>Projetez vos projets avec l'élite du tech africain</h1>
+            <h1>Projetez vos projets avec l'élite tech africaine</h1>
             <p>La plateforme leader pour trouver des experts certifiés en développement, design et data, partout en Afrique.</p>
             <div class="hero-actions">
                 <button type="button">Je suis FREELANCE</button>
@@ -51,16 +49,16 @@
             </div>
             <div class="hero-stats">
                 <div class="hero-stat">
-                    <strong>+2500</strong>
+                    <strong class="stat-number" data-target="2500" data-suffix="+">0</strong>
                     <span>freelances</span>
                 </div>
                 <div class="hero-stat">
-                    <strong>+800</strong>
+                    <strong class="stat-number" data-target="800" data-suffix="+">0</strong>
                     <span>entreprises</span>
                 </div>
                 <div class="hero-stat">
-                    <strong>+1200</strong>
-                    <span>mission réalisée</span>
+                    <strong class="stat-number" data-target="1200" data-suffix="+">0</strong>
+                    <span>missions réalisées</span>
                 </div>
             </div>
         </div>
@@ -68,7 +66,8 @@
             <img src="images.afri/images (1).jpg" alt="Illustration Afritalent">
         </div>
     </section>
-    <section class="how-it-works">
+
+    <section class="how-it-works fade-in-section">
         <h2>Comment cela marche</h2>
         <div class="card-grid">
             <article>
@@ -91,7 +90,8 @@
             </article>
         </div>
     </section>
-    <section class="categories">
+
+    <section class="categories fade-in-section">
         <h2>Nos domaines d'expertise</h2>
         <div class="categories-grid">
             <div class="category-card">
@@ -126,7 +126,8 @@
             </div>
         </div>
     </section>
-    <section class="testimonials">
+
+    <section class="testimonials fade-in-section">
          <h2>Les témoignages sur Afritalent</h2>
         
         <!-- Carrousel Bootstrap 5 -->
@@ -165,42 +166,45 @@
         </div>
     </section>
 
-    </section>
-    <section class="cta">
+    <section class="cta fade-in-section">
         <h2>Prêt à transformer votre vision en réalité ?</h2>
         <p>Rejoignez la communauté aujourd'hui et commencez à bâtir le futur.</p>
         <button type="button">Commencer Maintenant</button>
     </section>
 </main>
+
 <footer>
-    <div>
-        <h3>Afritalent</h3>
-        <p>Le pont entre les talents tech africains et les opportunités mondiales. Qualité, confiance et excellence.</p>
+    <div class="container d-flex flex-wrap justify-content-between gap-4 py-4">
+        <div>
+            <h3>Afritalent</h3>
+            <p>Le pont entre les talents tech africains et les opportunités mondiales.</p>
+        </div>
+        <div>
+            <h3>Cliquez sur les liens</h3>
+            <ul class="list-unstyled">
+                <li><a href="freelances.html">freelances</a></li>
+                <li><a href="index.html">entreprises</a></li>
+            </ul>
+        </div>
+        <div>
+            <h3>Ressources</h3>
+            <ul class="list-unstyled">
+                <li><a href="#">Blog</a></li>
+                <li><a href="#">FAQ</a></li>
+            </ul>
+        </div>
+        <div>
+            <h3>Contact</h3>
+            <p>Email.contact@afritalent.africa</p>
+            <p>LinkedIn | Twitter | Instagram</p>
+        </div>
     </div>
-    <div>
-        <h3>Cliquez sur les liens</h3>
-        <ul>
-            <li><a href="freelances.html">freelances</a></li>
-            <li><a href="index.html">entreprises</a></li>
-        </ul>
-    </div>
-    <div>
-        <h3>Ressources</h3>
-        <ul>
-            <li><a href="#">Blog</a></li>
-            <li><a href="#">FAQ</a></li>
-        </ul>
-    </div>
-    <div>
-        <h3>Contact</h3>
-        <p>Email.contact@afritalent.africa</p>
-        <p>LinkedIn | Twitter | Instagram</p>
-    </div>
-    <p>© Afritalent - Tous droits réservés.</p>
+    <p class="text-center border-top pt-3 m-0">© Afritalent - Tous droits réservés.</p>
 </footer>
-    <button id="back-to-top" class="btn btn-primary rounded-circle position-fixed bottom-0 end-0 m-4 d-none shadow-sm" aria-label="Retour en haut">
-        <i class="bi bi-arrow-up"></i>
-    </button>
+
+<button id="back-to-top" class="btn btn-primary rounded-circle position-fixed bottom-0 end-0 m-4 d-none shadow-sm" aria-label="Retour en haut">
+    <i class="bi bi-arrow-up"></i>
+</button>
 <!-- Bootstrap 5 via CDN : script JavaScript --> 
 <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script> 
 <!-- Votre script JavaScript --> 
