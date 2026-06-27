@@ -8,64 +8,111 @@
 <link 
 href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" 
 rel="stylesheet"> 
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.min.css">
 <!-- Votre feuille de style personnelle --> 
 <link rel="stylesheet" href="css/style.css">
 </head>
 <body>
+
+
+
+         <!-- 1. NAVBAR RESPONSIVE (Menu Hamburger natif Bootstrap) -->
+         
     <header>
-        <nav aria-label="Navigation principale">
-            <ul>
-                <li><a href="index.html">ACCUEIL</a></li>
-                <li><a href="freelances.html">FREELANCES</a></li>
-                <li><a href="tarifs.html">TARIFS</a></li>
-                <li><a href="about.html">À PROPOS</a></li>
-                <li><a href="contact.html">CONTACT</a></li>
-                <li><a href="#Afritalent">Rejoindre Afritalent</a></li>
-            </ul>
+        <nav class="navbar navbar-expand-md navbar-light bg-white border-bottom fixed-top">
+            <div class="container">
+                <!-- Logo / Marque -->
+                <a class="navbar-brand fw-bold text-primary" href="index.html">AfriTalent</a>
+                
+                <!-- Bouton Hamburger visible uniquement sur Mobile/Tablette < 768px -->
+                <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+                    <span class="navbar-toggler-icon"></span>
+                </button>
+                
+                <!-- Liens de navigation (se masquent derrière le hamburger sur mobile) -->
+                <div class="collapse navbar-collapse justify-content-end" id="navbarNav">
+                    <ul class="navbar-nav gap-2 text-center pt-3 pt-md-0">
+                        <li class="nav-item"><a class="nav-link" href="index.html">ACCUEIL</a></li>
+                        <li class="nav-item"><a class="nav-link active fw-bold text-primary" href="freelances.html">FREELANCES</a></li>
+                        <li class="nav-item"><a class="nav-link" href="tarifs.html">TARIFS</a></li>
+                        <li class="nav-item"><a class="nav-link" href="about.html">À PROPOS</a></li>
+                        <li class="nav-item"><a class="nav-link" href="contact.html">CONTACT</a></li>
+                        <li class="nav-item"><a class="btn btn-primary btn-sm text-white px-3 mt-2 mt-md-0" href="#Afritalent">Rejoindre AfriTalent</a></li>
+                    </ul>
+                </div>
+            </div>
         </nav>
     </header>
 
+    <!-- Espacement pour compenser la navbar fixe -->
+    <div style="margin-top: 80px;"></div>
+
     <main>
-        <section class="hero">
+        <!-- Section Hero réactive -->
+        <section class="hero freelances-hero py-5">
             <div class="container">
-                <div class="hero-content">
+                <div class="hero-content text-center">
                     <h1>Nos fonctionnalités <span>clés</span></h1>
-                    <p>Découvrez les outils puissants conçus pour maximiser le recrutement et la gestion des compétences.</p>
+                    <p class="lead text-muted mx-auto" style="max-width: 700px;">Découvrez les outils puissants conçus pour maximiser le recrutement et la gestion des compétences.</p>
                 </div>
             </div>
         </section>
 
-        <section class="features">
+       
+             <!-- 2. GRILLE CONFIGURÉE (col-12 mobile, col-md-6 tablette, col-lg-4 desktop) -->
+             
+        <section class="features pb-5">
             <div class="container">
-                <div class="row">
-                    <article class="col-md-4 mb-4">
-                        <div class="feature-card">
-                            <img src="images.afri/images (9).jpg" alt="Compétences techniques et comportementales">
-                            <h3>Compétences techniques et comportementales</h3>
-                            <p>Notre algorithme analyse à la fois les compétences techniques et comportementales pour connecter instantanément le bon candidat au bon projet.</p>
+                <div class="row g-4">
+                    
+                    <!-- Fonctionnalité 1 -->
+                    <article class="col-12 col-md-6 col-lg-4">
+                        <div class="feature-card h-100">
+                            <div class="feature-img-wrapper">
+                                <img src="images.afri/images (9).jpg" alt="Compétences techniques et comportementales">
+                            </div>
+                            <div class="feature-card-body">
+                                <h3>Compétences techniques et comportementales</h3>
+                                <p>Notre algorithme analyse à la fois les compétences techniques et comportementales pour connecter instantanément le bon candidat au bon projet.</p>
+                            </div>
                         </div>
                     </article>
-                    <article class="col-md-4 mb-4">
-                        <div class="feature-card">
-                            <img src="images.afri/images (10).jpg" alt="Tests de compétences intégrés">
-                            <h3>Tests de compétences intégrés</h3>
-                            <p>Évaluez le niveau réel de vos futurs collaborateurs grâce à notre catalogue de tests techniques et pratiques en ligne.</p>
+                    
+                    <!-- Fonctionnalité 2 -->
+                    <article class="col-12 col-md-6 col-lg-4">
+                        <div class="feature-card h-100">
+                            <div class="feature-img-wrapper">
+                                <img src="images.afri/images (10).jpg" alt="Tests de compétences intégrés">
+                            </div>
+                            <div class="feature-card-body">
+                                <h3>Tests de compétences intégrés</h3>
+                                <p>Évaluez le niveau réel de vos futurs collaborateurs grâce à notre catalogue de tests techniques et pratiques en ligne.</p>
+                            </div>
                         </div>
                     </article>
-                    <article class="col-md-4 mb-4">
-                        <div class="feature-card">
-                            <img src="images.afri/images (11).jpg" alt="Suivi des performances">
-                            <h3>Suivi des performances</h3>
-                            <p>Un tableau de bord centralisé pour piloter l'évolution, le mentorat et l'intégration des nouveaux talents au sein de vos équipes.</p>
+                    
+                    <!-- Fonctionnalité 3 -->
+                    <article class="col-12 col-md-6 col-lg-4">
+                        <div class="feature-card h-100">
+                            <div class="feature-img-wrapper">
+                                <img src="images.afri/images (11).jpg" alt="Suivi des performances">
+                            </div>
+                            <div class="feature-card-body">
+                                <h3>Suivi des performances</h3>
+                                <p>Un tableau de bord centralisé pour piloter l'évolution, le mentorat et l'intégration des nouveaux talents au sein de vos équipes.</p>
+                            </div>
                         </div>
                     </article>
+
                 </div>
             </div>
         </section>
     </main>
 
-    <footer>
-        <p>© Afritalent - Tous droits réservés.</p>
+    <footer class="bg-light py-4 text-center border-top">
+        <div class="container">
+            <p class="text-muted mb-0">© AfriTalent - Tous droits réservés.</p>
+        </div>
     </footer>
 
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>

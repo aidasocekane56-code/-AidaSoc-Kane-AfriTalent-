@@ -8,123 +8,162 @@
 <link 
 href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" 
 rel="stylesheet"> 
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.min.css">
 <!-- Votre feuille de style personnelle --> 
 <link rel="stylesheet" href="css/style.css">
 </head>
 <body>
 <header>
-    <nav aria-label="Navigation principale">
-        <ul>
-            <li><a href="index.html">ACCUEIL</a></li>
-            <li><a href="freelances.html">FREELANCES</a></li>
-            <li><a href="tarifs.html">TARIFS</a></li>
-            <li><a href="about.html">À PROPOS</a></li>
-            <li><a href="contact.html">CONTACT</a></li>
-            <li><a href="#Afritalent">Rejoindre Afritalent</a></li>
-        </ul>
-    </nav>
-</header>
-<main class="contact-page">
-    <section class="contact-intro">
-        <div>
-            <h1>Contactez-nous</h1>
-            <p>Une question, un projet ou besoin d'assistance ? Notre équipe vous répond sous 24h.</p>
+        <nav class="navbar navbar-expand-md navbar-light bg-white border-bottom fixed-top" aria-label="Navigation principale">
+            <div class="container">
+                <a class="navbar-brand fw-bold text-primary" href="index.html">AfriTalent</a>
+                
+                <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+                    <span class="navbar-toggler-icon"></span>
+                </button>
+                
+                <div class="collapse navbar-collapse justify-content-end" id="navbarNav">
+                    <ul class="navbar-nav gap-2 text-center pt-3 pt-md-0">
+                        <li class="nav-item"><a class="nav-link" href="index.html">ACCUEIL</a></li>
+                        <li class="nav-item"><a class="nav-link" href="freelances.html">FREELANCES</a></li>
+                        <li class="nav-item"><a class="nav-link" href="tarifs.html">TARIFS</a></li>
+                        <li class="nav-item"><a class="nav-link" href="about.html">À PROPOS</a></li>
+                        <li class="nav-item"><a class="nav-link active fw-bold text-primary" href="contact.html">CONTACT</a></li>
+                        <li class="nav-item"><a class="btn btn-primary btn-sm text-white px-3 mt-2 mt-md-0" href="#Afritalent">Rejoindre AfriTalent</a></li>
+                    </ul>
+                </div>
+            </div>
+        </nav>
+    </header>
+
+    <div style="margin-top: 80px;"></div>
+
+    <main class="contact-page py-5">
+        <section class="contact-intro text-center mb-5 container">
+            <div class="row justify-content-center">
+                <div class="col-12 col-md-8">
+                    <h1 class="display-5 fw-bold mb-3">Contactez-<span>nous</span></h1>
+                    <p class="lead text-muted">Une question, un projet ou besoin d'assistance ? Notre équipe vous répond sous 24h.</p>
+                </div>
+            </div>
+        </section>
+
+        <section class="contact-layout container">
+            <div class="row g-5">
+                
+                <div class="col-12 col-lg-7">
+                    <div class="card border-0 shadow-sm p-4 p-md-5 rounded-4 contact-form">
+                        <h3 class="fw-bold mb-4">Envoyer un message</h3>
+                        <form>
+                            <div class="row g-3 mb-3 form-row">
+                                <div class="col-12 col-md-6 form-group">
+                                    <label for="prenom" class="form-label fw-medium">Prénom</label>
+                                    <input id="prenom" type="text" class="form-control py-2" placeholder="Votre prénom">
+                                    <small class="form-text text-danger d-none">Veuillez renseigner votre prénom</small>
+                                </div>
+                                <div class="col-12 col-md-6 form-group">
+                                    <label for="nom" class="form-label fw-medium">Nom</label>
+                                    <input id="nom" type="text" class="form-control py-2" placeholder="Votre nom">
+                                    <small class="form-text text-danger d-none">Veuillez renseigner votre nom</small>
+                                </div>
+                            </div>
+                            
+                            <div class="mb-3 form-group">
+                                <label for="email" class="form-label fw-medium">Email</label>
+                                <input id="email" type="email" class="form-control py-2" placeholder="Votre adresse e-mail">
+                                <small class="form-text text-danger d-none">Veuillez renseigner votre email</small>
+                            </div>
+                            
+                            <div class="mb-3 form-group">
+                                <label for="sujet" class="form-label fw-medium">Sujet</label>
+                                <select id="sujet" class="form-select py-2">
+                                    <option value="">Choisissez une option ...</option>
+                                    <option value="support">Support Technique</option>
+                                    <option value="commercial">Service Commercial</option>
+                                    <option value="partenariat">Partenariat</option>
+                                    <option value="autre">Autre demande</option>
+                                </select>
+                                <small class="form-text text-danger d-none">Veuillez sélectionner le sujet de votre message.</small>
+                            </div>
+                            
+                            <div class="mb-4 form-group">
+                                <label for="message" class="form-label fw-medium">Message</label>
+                                <textarea id="message" rows="6" class="form-control" placeholder="Votre message"></textarea>
+                                <small class="form-text text-muted">Votre message doit contenir au moins 20 caractères.</small>
+                            </div>
+                            
+                            <div class="form-group form-action">
+                                <button type="submit" class="btn btn-primary w-100 py-3 text-white fw-bold rounded-3">Envoyer le message</button>
+                            </div>
+                        </form>
+                    </div>
+                </div>
+
+                <aside class="col-12 col-lg-5 contact-info d-flex flex-column gap-4">
+                    
+                    <div class="card border-0 shadow-sm p-4 rounded-4 bg-white info-card flex-grow-1">
+                        <h3 class="fw-bold mb-4">Nos coordonnées</h3>
+                        
+                        <div class="d-flex align-items-start gap-3 mb-4 contact-item">
+                            <div class="icon text-primary fs-4 pt-1">
+                                <i class="bi bi-geo-alt-fill"></i>
+                            </div>
+                            <div>
+                                <h6 class="fw-bold mb-1">Adresse principale</h6>
+                                <p class="text-muted mb-0">8 place de l'Opéra,<br>75900 Dakar, SENEGAL</p>
+                            </div>
+                        </div>
+                        
+                        <div class="d-flex align-items-start gap-3 mb-4 contact-item">
+                            <div class="icon text-primary fs-4 pt-1">
+                                <i class="bi bi-telephone-fill"></i>
+                            </div>
+                            <div>
+                                <h6 class="fw-bold mb-1">Téléphone</h6>
+                                <p class="text-muted mb-0">+221 78 655 58 23</p>
+                            </div>
+                        </div>
+                        
+                        <div class="d-flex align-items-start gap-3 contact-item">
+                            <div class="icon text-primary fs-4 pt-1">
+                                <i class="bi bi-envelope-fill"></i>
+                            </div>
+                            <div>
+                                <h6 class="fw-bold mb-1">E-mail général</h6>
+                                <p class="text-muted mb-0">contact@votreplateforme.com</p>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="card border-0 shadow-sm p-4 rounded-4 bg-white social-section">
+                        <h6 class="fw-bold mb-3">Suivez-nous</h6>
+                        <div class="d-flex gap-3 social-links">
+                            <a href="https://facebook.com" target="_blank" rel="noopener noreferrer" class="social-icon" aria-label="Facebook">
+                                <img src="images.afri/images.png" alt="Facebook" class="rounded-circle shadow-sm" style="width: 40px; height: 40px; object-fit: cover;">
+                            </a>
+                            <a href="https://instagram.com" target="_blank" rel="noopener noreferrer" class="social-icon" aria-label="Instagram">
+                                <img src="images.afri/Instagram-icon-Logo-2016-present.png" alt="Instagram" class="rounded-circle shadow-sm" style="width: 40px; height: 40px; object-fit: cover;">
+                            </a>
+                            <a href="https://twitter.com" target="_blank" rel="noopener noreferrer" class="social-icon" aria-label="Twitter">
+                                <img src="images.afri/nl-3038-twitter.jpg" alt="Twitter" class="rounded-circle shadow-sm" style="width: 40px; height: 40px; object-fit: cover;">
+                            </a>
+                        </div>
+                    </div>
+
+                    <div class="card border-0 shadow-sm rounded-4 overflow-hidden map-frame" style="height: 250px;">
+                        <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3859.3477145749715!2d-17.4471!3d14.6937!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x0%3A0x0!2zMTTCsDQxJzM3LjMiTiAxN8KwMjYnNDkuNiJX!5e0!3m2!1sfr!2ssn!4v1625000000000!5m2!1sfr!2ssn" class="w-100 h-100 border-0" allowfullscreen="" loading="lazy" aria-label="Carte Google Maps"></iframe>
+                    </div>
+                </aside>
+                
+            </div>
+        </section>
+    </main>
+
+    <footer class="bg-white py-4 text-center border-top">
+        <div class="container">
+            <p class="text-muted mb-0">© AfriTalent - Tous droits réservés.</p>
         </div>
-    </section>
-
-    <section class="contact-layout">
-        <div class="contact-form">
-            <h3>Envoyer un message</h3>
-            <form>
-                <div class="form-row">
-                    <div class="form-group">
-                        <label for="prenom">Prénom</label>
-                        <input id="prenom" type="text" placeholder="Votre prénom">
-                        <small>Veuillez renseigner votre prénom</small>
-                    </div>
-                    <div class="form-group">
-                        <label for="nom">Nom</label>
-                        <input id="nom" type="text" placeholder="Votre nom">
-                        <small>Veuillez renseigner votre nom</small>
-                    </div>
-                </div>
-                <div class="form-group">
-                    <label for="email">Email</label>
-                    <input id="email" type="email" placeholder="Votre adresse e-mail">
-                    <small>Veuillez renseigner votre email</small>
-                </div>
-                <div class="form-group">
-                    <label for="sujet">Sujet</label>
-                    <select id="sujet">
-                        <option value="">Choisissez une option ...</option>
-                        <option value="support">Support Technique</option>
-                        <option value="commercial">Service Commercial</option>
-                        <option value="partenariat">Partenariat</option>
-                        <option value="autre">Autre demande</option>
-                    </select>
-                    <small>Veuillez sélectionner le sujet de votre message.</small>
-                </div>
-                <div class="form-group">
-                    <label for="message">Message</label>
-                    <textarea id="message" rows="6" placeholder="Votre message"></textarea>
-                    <small>Votre message doit contenir au moins 20 caractères.</small>
-                </div>
-                <div class="form-group form-action">
-                    <button type="submit">Envoyer le message</button>
-                </div>
-            </form>
-        </div>
-
-        <aside class="contact-info">
-            <div class="info-card">
-                <h3>Nos coordonnées</h3>
-                <div class="contact-item">
-                    <div class="icon"></div>
-                    <div>
-                        <h6>Adresse principale</h6>
-                        <p>8 place de l'Opéra,<br>75900 Dakar, SENEGAL</p>
-                    </div>
-                </div>
-                <div class="contact-item">
-                    <div class="icon"></div>
-                    <div>
-                        <h6>Téléphone</h6>
-                        <p>+221 78 655 58 23</p>
-                    </div>
-                </div>
-                <div class="contact-item">
-                    <div class="icon"></div>
-                    <div>
-                        <h6>E-mail général</h6>
-                        <p>contact@votreplateforme.com</p>
-                    </div>
-                </div>
-            </div>
-
-            <div class="social-section">
-                <h6>Suivez-nous</h6>
-                <div class="social-links">
-                    <a href="https://facebook.com" target="_blank" rel="noopener noreferrer" class="social-icon facebook" aria-label="Facebook">
-                        <img src="images.afri/images.png" alt="Facebook">
-                    </a>
-                    <a href="https://instagram.com" target="_blank" rel="noopener noreferrer" class="social-icon instagram" aria-label="Instagram">
-                        <img src="images.afri/Instagram-icon-Logo-2016-present.png" alt="Instagram">
-                    </a>
-                    <a href="https://twitter.com" target="_blank" rel="noopener noreferrer" class="social-icon twitter" aria-label="Twitter">
-                        <img src="images.afri/nl-3038-twitter.jpg" alt="Twitter">
-                    </a>
-                </div>
-            </div>
-
-            <div class="map-frame">
-                <iframe src="" aria-label="Carte Google Maps"></iframe>
-            </div>
-        </aside>
-    </section>
-</main>
-<footer>
-    <p>© Afritalent - Tous droits réservés.</p>
-</footer>
+    </footer>
 <!-- Bootstrap 5 via CDN : script JavaScript --> 
 <script 
 src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"

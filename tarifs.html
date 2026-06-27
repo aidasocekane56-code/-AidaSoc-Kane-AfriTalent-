@@ -5,130 +5,214 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Afritalent / TARIFS</title>
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.min.css">
     <link rel="stylesheet" href="css/style.css">
 </head>
 <body>
     <header>
-        <nav aria-label="Navigation principale">
-            <ul>
-                <li><a href="index.html">ACCUEIL</a></li>
-                <li><a href="freelances.html">FREELANCES</a></li>
-                <li><a href="tarifs.html">TARIFS</a></li>
-                <li><a href="about.html">À PROPOS</a></li>
-                <li><a href="contact.html">CONTACT</a></li>
-                <li><a href="#Afritalent">Rejoindre Afritalent</a></li>
-            </ul>
+        <nav class="navbar navbar-expand-md navbar-light bg-white border-bottom fixed-top">
+            <div class="container">
+                <!-- Logo / Marque -->
+                <a class="navbar-brand fw-bold text-primary" href="index.html">AfriTalent</a>
+                
+                <!-- Bouton Hamburger visible uniquement sur Mobile/Tablette < 768px -->
+                <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+                    <span class="navbar-toggler-icon"></span>
+                </button>
+                
+                <!-- Liens de navigation (se masquent derrière le hamburger sur mobile) -->
+                <div class="collapse navbar-collapse justify-content-end" id="navbarNav">
+                    <ul class="navbar-nav gap-2 text-center pt-3 pt-md-0">
+                        <li class="nav-item"><a class="nav-link" href="index.html">ACCUEIL</a></li>
+                        <li class="nav-item"><a class="nav-link" href="freelances.html">FREELANCES</a></li>
+                        <li class="nav-item"><a class="nav-link active fw-bold text-primary" href="tarifs.html">TARIFS</a></li>
+                        <li class="nav-item"><a class="nav-link" href="about.html">À PROPOS</a></li>
+                        <li class="nav-item"><a class="nav-link" href="contact.html">CONTACT</a></li>
+                        <li class="nav-item"><a class="btn btn-primary btn-sm text-white px-3 mt-2 mt-md-0" href="#Afritalent">Rejoindre AfriTalent</a></li>
+                    </ul>
+                </div>
+            </div>
         </nav>
     </header>
 
+    <!-- Espacement pour compenser la navbar fixe -->
+    <div style="margin-top: 80px;"></div>
+
     <main>
-        <section>
-            <div>
-                <h1>Des tarifs adaptés à vos besoins</h1>
-                <p>Choisissez le plan parfait pour propulser votre activité avec des options claires, transparentes et évolutives.</p>
+        <!-- Section Hero des prix -->
+        <section class="pricing-hero py-5 text-center">
+            <div class="container">
+                <h1 class="display-5 fw-bold">Des tarifs clairs pour accompagner votre croissance</h1>
+                <p class="lead text-muted mx-auto" style="max-width: 700px;">Sélectionnez le plan qui correspond à votre projet : simple, transparent et conçu pour accélérer vos recrutements et vos livrables.</p>
             </div>
+        </section>
 
-            <div>
-                <div>
-                    <h3>Gratuit</h3>
-                    <div>
-                        <span>0 €</span>
-                        <span>/ mois</span>
-                    </div>
-                    <ul>
-                        <li>Accès aux fonctionnalités de base</li>
-                        <li>1 utilisateur inclus</li>
-                        <li>Support par e-mail (48h)</li>
-                        <li>Tableaux de bord simples</li>
-                        <li>Export PDF basique</li>
-                    </ul>
-                    <button>Commencer gratuitement</button>
-                </div>
-            </div>
+        
+             <!-- 2. GRILLE DE TARIFS CONFIGURÉE (col-12 mobile, col-md-6 tablette, col-lg-4 desktop) -->
+             
+        <section class="pricing-cards pb-5">
+            <div class="container">
+                <div class="row g-4 justify-content-center">
+                    
+                    <!-- Plan Gratuit -->
+                    <article class="col-12 col-md-6 col-lg-4">
+                        <div class="card h-100 border-light-subtle shadow-sm p-4 rounded-4 text-center pricing-card">
+                            <div class="card-body d-flex flex-column">
+                                <h3 class="card-title fw-bold mb-3">Gratuit</h3>
+                                <div class="price-zone mb-4 d-inline-flex align-items-baseline justify-content-center gap-2">
+                                    <span class="fs-1 fw-bold">0 €</span>
+                                </div>
+                                <p class="text-muted small mb-4">Démarrez sans engagement et découvrez la plateforme dès aujourd'hui.</p>
+                                <ul class="list-unstyled text-start mb-4 flex-grow-1">
+                                    <li class="mb-2"><i class="bi bi-check-circle-fill text-success me-2"></i> Accès immédiat aux fonctions essentielles</li>
+                                    <li class="mb-2"><i class="bi bi-check-circle-fill text-success me-2"></i> 1 profil utilisateur</li>
+                                    <li class="mb-2"><i class="bi bi-check-circle-fill text-success me-2"></i> Support e-mail réactif</li>
+                                    <li class="mb-2"><i class="bi bi-check-circle-fill text-success me-2"></i> Tableaux de bord simplifiés</li>
+                                    <li class="mb-2"><i class="bi bi-check-circle-fill text-success me-2"></i> Export PDF rapide</li>
+                                </ul>
+                                <button class="btn btn-outline-primary w-100 py-2 rounded-3">Commencer gratuitement</button>
+                            </div>
+                        </div>
+                    </article>
 
-            <div>
-                <span>Populaire</span>
-                <div>
-                    <h3>Pro</h3>
-                    <div>
-                        <span>29 €</span>
-                        <span>/ mois</span>
-                    </div>
-                    <ul>
-                        <li>Tout ce qui est inclus dans le plan Gratuit</li>
-                        <li>Jusqu'à 5 utilisateurs</li>
-                        <li>Rapports avancés</li>
-                        <li>Support prioritaire (2h)</li>
-                        <li>Intégrations API</li>
-                    </ul>
-                    <button>Choisir le plan Pro</button>
-                </div>
-            </div>
+                    <!-- Plan Pro (Populaire) -->
+                    <article class="col-12 col-md-6 col-lg-4">
+                        <div class="card h-100 border-primary shadow p-4 rounded-4 text-center pricing-card position-relative">
+                            <span class="badge bg-primary text-white position-absolute top-0 start-50 translate-middle px-3 py-2 rounded-pill uppercase">Populaire</span>
+                            <div class="card-body d-flex flex-column pt-3">
+                                <h3 class="card-title fw-bold mb-3">Pro</h3>
+                                <div class="price-zone mb-4 d-inline-flex align-items-baseline justify-content-center gap-2">
+                                    <span class="fs-1 fw-bold">29 €</span>
+                                </div>
+                                <p class="text-muted small mb-4">Conçu pour les équipes en croissance qui veulent gagner en efficacité.</p>
+                                <ul class="list-unstyled text-start mb-4 flex-grow-1">
+                                    <li class="mb-2"><i class="bi bi-check-circle-fill text-success me-2"></i> Tout le contenu du plan Gratuit</li>
+                                    <li class="mb-2"><i class="bi bi-check-circle-fill text-success me-2"></i> Jusqu'à 5 membres d'équipe</li>
+                                    <li class="mb-2"><i class="bi bi-check-circle-fill text-success me-2"></i> Rapports détaillés et suivi de projet</li>
+                                    <li class="mb-2"><i class="bi bi-check-circle-fill text-success me-2"></i> Support prioritaire en 2 heures</li>
+                                    <li class="mb-2"><i class="bi bi-check-circle-fill text-success me-2"></i> Connexions API & intégrations</li>
+                                </ul>
+                                <button class="btn btn-primary w-100 text-white py-2 rounded-3">Choisir le plan Pro</button>
+                            </div>
+                        </div>
+                    </article>
 
-            <div>
-                <div>
-                    <h3>Entreprise</h3>
-                    <div>
-                        <span>99 €</span>
-                        <span>/ mois</span>
-                    </div>
-                    <ul>
-                        <li>Utilisateurs illimités</li>
-                        <li>Fonctionnalités premium</li>
-                        <li>Support dédié 24/7</li>
-                        <li>Intégrations sur mesure</li>
-                        <li>Sécurité et conformité avancées</li>
-                    </ul>
-                    <button>Contacter le service commercial</button>
+                    <!-- Plan Entreprise -->
+                    <article class="col-12 col-md-6 col-lg-4">
+                        <div class="card h-100 border-light-subtle shadow-sm p-4 rounded-4 text-center pricing-card">
+                            <div class="card-body d-flex flex-column">
+                                <h3 class="card-title fw-bold mb-3">Entreprise</h3>
+                                <div class="price-zone mb-4 d-inline-flex align-items-baseline justify-content-center gap-2">
+                                    <span class="fs-1 fw-bold">99 €</span>
+                                </div>
+                                <p class="text-muted small mb-4">Une offre premium pour les organisations qui exigent performance et sécurité.</p>
+                                <ul class="list-unstyled text-start mb-4 flex-grow-1">
+                                    <li class="mb-2"><i class="bi bi-check-circle-fill text-success me-2"></i> Utilisateurs illimités pour toute l'équipe</li>
+                                    <li class="mb-2"><i class="bi bi-check-circle-fill text-success me-2"></i> Fonctionnalités premium dédiées</li>
+                                    <li class="mb-2"><i class="bi bi-check-circle-fill text-success me-2"></i> Support dédié en continu 24/7</li>
+                                    <li class="mb-2"><i class="bi bi-check-circle-fill text-success me-2"></i> Intégrations sur mesure et déploiement</li>
+                                    <li class="mb-2"><i class="bi bi-check-circle-fill text-success me-2"></i> Sécurité renforcée et conformité garantie</li>
+                                </ul>
+                                <button class="btn btn-outline-primary w-100 py-2 rounded-3">Contacter le service commercial</button>
+                            </div>
+                        </div>
+                    </article>
+
                 </div>
             </div>
         </section>
 
-        <section>
-            <div>
-                <h2>Foire aux questions (FAQ)</h2>
-                <p>Tout ce que vous devez savoir sur nos offres et notre plateforme.</p>
-            </div>
-
-            <div>
-                <h2><button type="button">Puis-je changer de plan à tout moment ?</button></h2>
-                <div>
-                    <div>Oui. Vous pouvez passer à un forfait supérieur ou inférieur, ou annuler votre abonnement directement depuis votre espace client. Les changements sont appliqués au prochain cycle de facturation.</div>
+       
+             <!-- 3. SECTION FAQ (Optimisée Mobile via l'Accordion Bootstrap) -->
+            
+        <section class="faq py-5 bg-light border-top">
+            <div class="container" style="max-width: 800px;">
+                <div class="text-center mb-5">
+                    <h2 class="fw-bold">Foire aux questions (FAQ)</h2>
+                    <p class="text-muted">Tout ce que vous devez savoir sur nos offres et notre plateforme.</p>
                 </div>
-            </div>
 
-            <div>
-                <h2><button type="button">Y a-t-il des frais d'installation cachés ?</button></h2>
-                <div>
-                    <div>Non. Les prix affichés sont transparents et incluent tout ce qui est listé dans la description du forfait. Vous payez uniquement ce qui est indiqué.</div>
-                </div>
-            </div>
+                <div class="accordion accordion-flush rounded-3 shadow-sm" id="accordionFAQ">
+                    
+                    <!-- Question 1 -->
+                    <div class="accordion-item">
+                        <h2 class="accordion-header">
+                            <button class="accordion-button collapsed fw-semibold" type="button" data-bs-toggle="collapse" data-bs-target="#faq1" aria-expanded="false" aria-controls="faq1">
+                                Puis-je changer de plan à tout moment ?
+                            </button>
+                        </h2>
+                        <div id="faq1" class="accordion-collapse collapse" data-bs-parent="#accordionFAQ">
+                            <div class="accordion-body text-muted">
+                                Oui. Vous pouvez passer à un forfait supérieur ou inférieur, ou annuler votre abonnement directement depuis votre espace client. Les changements sont appliqués au prochain cycle de facturation.
+                            </div>
+                        </div>
+                    </div>
 
-            <div>
-                <h2><button type="button">Proposez-vous une période d'essai gratuite ?</button></h2>
-                <div>
-                    <div>Oui. Le plan Gratuit vous permet de découvrir la plateforme sans limite de temps. Pour tester le plan Pro, nous offrons une période d'essai de 14 jours sans engagement.</div>
-                </div>
-            </div>
+                    <!-- Question 2 -->
+                    <div class="accordion-item">
+                        <h2 class="accordion-header">
+                            <button class="accordion-button collapsed fw-semibold" type="button" data-bs-toggle="collapse" data-bs-target="#faq2" aria-expanded="false" aria-controls="faq2">
+                                Y a-t-il des frais d'installation cachés ?
+                            </button>
+                        </h2>
+                        <div id="faq2" class="accordion-collapse collapse" data-bs-parent="#accordionFAQ">
+                            <div class="accordion-body text-muted">
+                                Non. Les prix affichés sont transparents et incluent tout ce qui est listé dans la description du forfait. Vous payez uniquement ce qui est indiqué.
+                            </div>
+                        </div>
+                    </div>
 
-            <div>
-                <h2><button type="button">Quels sont les modes de paiement acceptés ?</button></h2>
-                <div>
-                    <div>Nous acceptons les principales cartes de crédit (Visa, Mastercard, American Express) ainsi que PayPal. Pour le plan Entreprise, les virements bancaires sont également possibles.</div>
-                </div>
-            </div>
+                    <!-- Question 3 -->
+                    <div class="accordion-item">
+                        <h2 class="accordion-header">
+                            <button class="accordion-button collapsed fw-semibold" type="button" data-bs-toggle="collapse" data-bs-target="#faq3" aria-expanded="false" aria-controls="faq3">
+                                Proposez-vous une période d'essai gratuite ?
+                            </button>
+                        </h2>
+                        <div id="faq3" class="accordion-collapse collapse" data-bs-parent="#accordionFAQ">
+                            <div class="accordion-body text-muted">
+                                Oui. Le plan Gratuit vous permet de découvrir la plateforme sans limite de temps. Pour tester le plan Pro, nous offrons une période d'essai de 14 jours sans engagement.
+                            </div>
+                        </div>
+                    </div>
 
-            <div>
-                <h2><button type="button">Mes données sont-elles sécurisées sur la plateforme ?</button></h2>
-                <div>
-                    <div>La sécurité est notre priorité. Vos données sont chiffrées en transit et en stockage. Notre plateforme respecte également les normes RGPD pour protéger vos informations.</div>
+                    <!-- Question 4 -->
+                    <div class="accordion-item">
+                        <h2 class="accordion-header">
+                            <button class="accordion-button collapsed fw-semibold" type="button" data-bs-toggle="collapse" data-bs-target="#faq4" aria-expanded="false" aria-controls="faq4">
+                                Quels sont les modes de paiement acceptés ?
+                            </button>
+                        </h2>
+                        <div id="faq4" class="accordion-collapse collapse" data-bs-parent="#accordionFAQ">
+                            <div class="accordion-body text-muted">
+                                Nous acceptons les principales cartes de crédit (Visa, Mastercard, American Express) ainsi que PayPal. Pour le plan Entreprise, les virements bancaires sont également possibles.
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Question 5 -->
+                    <div class="accordion-item">
+                        <h2 class="accordion-header">
+                            <button class="accordion-button collapsed fw-semibold" type="button" data-bs-toggle="collapse" data-bs-target="#faq5" aria-expanded="false" aria-controls="faq5">
+                                Mes données sont-elles sécurisées sur la plateforme ?
+                            </button>
+                        </h2>
+                        <div id="faq5" class="accordion-collapse collapse" data-bs-parent="#accordionFAQ">
+                            <div class="accordion-body text-muted">
+                                La sécurité est notre priorité. Vos données sont chiffrées en transit et en stockage. Notre plateforme respecte également les normes RGPD pour protéger vos informations.
+                            </div>
+                        </div>
+                    </div>
+
                 </div>
             </div>
         </section>
     </main>
 
-    <footer>
-        <p>© Afritalent - Tous droits réservés.</p>
+    <footer class="bg-white py-4 text-center border-top">
+        <div class="container">
+            <p class="text-muted mb-0">© AfriTalent - Tous droits réservés.</p>
+        </div>
     </footer>
 
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>

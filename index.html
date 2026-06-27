@@ -9,24 +9,34 @@
 <link rel="stylesheet" href="css/style.css">
 </head>
 <body>
-<header>
-    <nav>
-        <a href="index.html" class="brand">
-            <img src="images.afri/logoafri.jpg" alt="Logo Afritalent">
-        </a>
-        <button type="button" class="menu-toggle" aria-label="Ouvrir le menu" aria-expanded="false">
-            <span></span>
-        </button>
-        <ul class="nav-links">
-            <li><a href="index.html">ACCUEIL</a></li>
-            <li><a href="freelances.html">FREELANCES</a></li>
-            <li><a href="tarifs.html">TARIFS</a></li>
-            <li><a href="about.html">À PROPOS</a></li>
-            <li><a href="contact.html">CONTACT</a></li>
-            <li><a href="#">Rejoindre Afritalent</a></li>
-        </ul>
-    </nav>
-</header>
+<!-- ==========================================================================
+         1. NAVBAR RESPONSIVE FIXE (Menu Hamburger)
+         ========================================================================== -->
+    <header>
+        <nav class="navbar navbar-expand-md navbar-light bg-white border-bottom fixed-top" aria-label="Navigation principale">
+            <div class="container">
+                <a class="navbar-brand fw-bold text-primary d-flex align-items-center gap-2" href="index.html">
+                    <span>AfriTalent</span>
+                </a>
+                
+                <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+                    <span class="navbar-toggler-icon"></span>
+                </button>
+                
+                <div class="collapse navbar-collapse justify-content-end" id="navbarNav">
+                    <ul class="navbar-nav gap-2 text-center pt-3 pt-md-0">
+                        <li class="nav-item"><a class="nav-link active fw-bold text-primary" href="index.html">ACCUEIL</a></li>
+                        <li class="nav-item"><a class="nav-link" href="freelances.html">FREELANCES</a></li>
+                        <li class="nav-item"><a class="nav-link" href="tarifs.html">TARIFS</a></li>
+                        <li class="nav-item"><a class="nav-link" href="about.html">À PROPOS</a></li>
+                        <li class="nav-item"><a class="nav-link" href="contact.html">CONTACT</a></li>
+                        <li class="nav-item"><a class="btn btn-primary btn-sm text-white px-3 mt-2 mt-md-0" href="#">Rejoindre AfriTalent</a></li>
+                    </ul>
+                </div>
+            </div>
+        </nav>
+    </header>
+
 <main>
     <section class="hero">
         <div class="hero-content">

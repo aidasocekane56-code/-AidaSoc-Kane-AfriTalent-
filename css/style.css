@@ -1788,17 +1788,17 @@ footer p {
         flex-direction: column;
     }
 }
-/* ==========================================================================
-   1. CODE DU COMMIT 3 (Tu le laisses au début de ton fichier)
-   ========================================================================== */
+
+   /* 1. CODE DU COMMIT 3 (Tu le laisses au début de ton fichier) */
+
 :root {
     --primary-color: #0d6efd;
     /* ... tes variables, ton reset, ta navbar, etc. ... */
 }
 
-/* ==========================================================================
-   2. CODE DU COMMIT 4 (Tu viens le coller ici, juste en dessous)
-   ========================================================================== */
+
+   /* 2. CODE DU COMMIT 4 (Tu viens le coller ici, juste en dessous)
+   */
    
 /* --- SECTION HERO --- */
 .hero {
@@ -2165,10 +2165,235 @@ header nav {
     }
 }
 
-/* ==========================================================================
-   1. CODE DU COMMIT 3 (Tu le laisses au début de ton fichier)
-   ========================================================================== */
+
+   /* 1. CODE DU COMMIT 3 (Tu le laisses au début de ton fichier) */
+   
 :root {
     --primary-color: #0d6efd;
     /* ... tes variables, ton reset, ta navbar, etc. ... */
+}
+
+
+   /* COMMIT 5 : RESPONSIVE DESIGN & MEDIA QUERIES */
+   
+
+
+   /* A. MOBILE FIRST (Par défaut, adapté pour mobile ~375px) */
+   
+.freelances-hero h1 {
+    font-size: 2rem; /* Titre plus petit sur mobile pour éviter les coupures */
+    font-weight: 800;
+}
+
+.freelances-hero p {
+    font-size: 1rem;
+}
+
+.feature-img-wrapper {
+    width: 100%;
+    height: 180px; /* Image légèrement réduite sur smartphone */
+    overflow: hidden;
+}
+
+
+   /* B. TABLETTE (Écrans supérieurs ou égaux à 768px) */
+  
+@media (min-width: 768px) {
+    .freelances-hero h1 {
+        font-size: 2.5rem; /* Le titre grandit sur tablette */
+    }
+    
+    .feature-img-wrapper {
+        height: 200px;
+    }
+}
+
+
+   /* C. DESKTOP / ORDINATEUR (Écrans supérieurs ou égaux à 1200px) */
+  
+@media (min-width: 1200px) {
+    .freelances-hero h1 {
+        font-size: 3.2rem; /* Titre géant et expressif sur grand écran */
+    }
+    
+    .freelances-hero p {
+        font-size: 1.25rem; /* Texte d'introduction plus aéré */
+    }
+    
+    .feature-card {
+        /* On renforce un peu l'effet hover du Commit 4 sur ordinateur */
+        margin-bottom: 0; 
+    }
+}
+
+
+   /* COMMIT 5 : RESPONSIVE DESIGN - PAGE TARIFS */
+  
+
+/* --- Base Mobile First (Adapté par défaut pour les écrans de 375px) --- */
+.pricing-hero h1 {
+    font-size: 1.85rem;
+    font-weight: 800;
+}
+
+.pricing-hero h1 span {
+    color: #0d6efd; /* Reprend la touche de couleur dynamique du commit 4 */
+}
+
+/* On fluidifie l'affichage des prix sur smartphone */
+.pricing-card {
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+/* --- Breakpoint Tablette (>= 768px) --- */
+@media (min-width: 768px) {
+    .pricing-hero h1 {
+        font-size: 2.4rem;
+    }
+}
+
+/* --- Breakpoint Desktop (>= 1200px) --- */
+@media (min-width: 1200px) {
+    .pricing-hero h1 {
+        font-size: 3rem;
+    }
+    
+    /* Effet d'accentuation visuelle uniquement sur ordinateur */
+    .pricing-card:hover {
+        transform: scale(1.03);
+        box-shadow: 0 15px 30px rgba(13, 110, 253, 0.1);
+    }
+}
+
+   /* COMMIT 5 : RESPONSIVE DESIGN & MEDIA QUERIES */
+   
+
+
+   /* A. MOBILE FIRST (Par défaut, adapté pour mobile ~375px) */
+   
+.freelances-hero h1 {
+    font-size: 2rem; /* Titre plus petit sur mobile pour éviter les coupures */
+    font-weight: 800;
+}
+
+.freelances-hero p {
+    font-size: 1rem;
+}
+
+.feature-img-wrapper {
+    width: 100%;
+    height: 180px; /* Image légèrement réduite sur smartphone */
+    overflow: hidden;
+}
+
+
+   /* B. TABLETTE (Écrans supérieurs ou égaux à 768px) */
+  
+@media (min-width: 768px) {
+    .freelances-hero h1 {
+        font-size: 2.5rem; /* Le titre grandit sur tablette */
+    }
+    
+    .feature-img-wrapper {
+        height: 200px;
+    }
+}
+
+
+   /* C. DESKTOP / ORDINATEUR (Écrans supérieurs ou égaux à 1200px) */
+  
+@media (min-width: 1200px) {
+    .freelances-hero h1 {
+        font-size: 3.2rem; /* Titre géant et expressif sur grand écran */
+    }
+    
+    .freelances-hero p {
+        font-size: 1.25rem; /* Texte d'introduction plus aéré */
+    }
+    
+    .feature-card {
+        /* On renforce un peu l'effet hover du Commit 4 sur ordinateur */
+        margin-bottom: 0; 
+    }
+}
+
+
+   /* COMMIT 5 : RESPONSIVE DESIGN - PAGE À PROPOS */
+   
+
+/* --- Ajustements Fluides Mobile First (< 576px) --- */
+.about-hero h1 {
+    font-size: 2rem;
+}
+
+.value-card, .member-card, .stat-card {
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+/* Évite les débordements de texte sur les petits écrans de 375px */
+.stat-card h3 {
+    font-size: 1.85rem;
+}
+
+/* --- Media Query Tablette (>= 768px) --- */
+@media (min-width: 768px) {
+    .about-hero h1 {
+        font-size: 2.75rem;
+    }
+    
+    .stat-card h3 {
+        font-size: 2.25rem;
+    }
+}
+
+/* --- Media Query Desktop (>= 992px) --- */
+@media (min-width: 992px) {
+    .about-hero h1 {
+        font-size: 3.5rem;
+    }
+
+    .stat-card h3 {
+        font-size: 3rem;
+    }
+}
+
+   /* COMMIT 5 : RESPONSIVE DESIGN - PAGE CONTACT */
+ 
+
+/* --- Configuration Globale Mobile First (< 768px) --- */
+.contact-intro h1 {
+    font-size: 2.2rem;
+    font-weight: 800;
+}
+
+.contact-intro h1 span {
+    color: #0d6efd; /* Touche dynamique Commit 4 */
+}
+
+/* On force les champs de saisie à avoir une hauteur adaptée au tactile sur mobile */
+.form-control, .form-select {
+    font-size: 1rem;
+}
+
+/* --- Media Query Tablette (>= 768px) --- */
+@media (min-width: 768px) {
+    .contact-intro h1 {
+        font-size: 2.8rem;
+    }
+}
+
+/* --- Media Query Desktop (>= 1200px) --- */
+@media (min-width: 1200px) {
+    .contact-intro h1 {
+        font-size: 3.5rem;
+    }
+    
+    /* Légère animation sur la carte formulaire au survol (Optionnel Commit 4) */
+    .contact-form {
+        transition: box-shadow 0.3s ease;
+    }
+    
+    .contact-form:hover {
+        box-shadow: 0 15px 30px rgba(0, 0, 0, 0.08) ;
+    }
 }
