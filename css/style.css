@@ -33,11 +33,22 @@ img {
 }
 
 header {
-    background-color: #ffffff;
-    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+    background-color: transparent;
     position: sticky;
     top: 0;
     z-index: 1000;
+}
+
+header nav {
+    background-color: rgba(255, 255, 255, 0.95);
+    transition: background-color 0.3s ease, box-shadow 0.3s ease, transform 0.3s ease, padding 0.3s ease;
+}
+
+header nav.scrolled {
+    background-color: rgba(255, 255, 255, 1);
+    box-shadow: 0 15px 35px rgba(0, 0, 0, 0.12);
+    transform: translateY(-1px);
+    padding: 8px 20px;
 }
 
 header nav > div {
@@ -116,6 +127,20 @@ button {
     border-radius: 8px;
     border: none;
     transition: 0.3s;
+}
+
+#back-to-top {
+    width: 50px;
+    height: 50px;
+    display: grid;
+    place-items: center;
+    font-size: 1.1rem;
+    z-index: 1050;
+    transition: transform 0.25s ease, opacity 0.25s ease;
+}
+
+#back-to-top:hover {
+    transform: translateY(-2px);
 }
 
 section:nth-of-type(1) button:first-of-type {
@@ -454,6 +479,14 @@ header nav {
     max-width: 1200px;
     margin: 0 auto;
     padding: var(--spacing-md);
+    transition: background-color 0.3s ease, box-shadow 0.3s ease, transform 0.3s ease, padding 0.3s ease;
+}
+
+header nav.scrolled {
+    background-color: rgba(255, 255, 255, 0.99);
+    box-shadow: 0 16px 40px rgba(15, 23, 42, 0.12);
+    transform: translateY(-1px);
+    padding: 10px var(--spacing-md);
 }
 
 /* Configuration de la liste de liens */
@@ -2396,4 +2429,23 @@ header nav {
     .contact-form:hover {
         box-shadow: 0 15px 30px rgba(0, 0, 0, 0.08) ;
     }
+}
+
+/* Couleurs par défaut (Mode Clair) */
+:root, [data-theme="light"] {
+    --bg-color: #ffffff;
+    --text-color: #212529;
+}
+
+/* Couleurs pour le Mode Sombre */
+[data-theme="dark"] {
+    --bg-color: #121212;
+    --text-color: #f8f9fa;
+}
+
+/* Application des variables à ton site */
+body {
+    background-color: var(--bg-color);
+    color: var(--text-color);
+    transition: background-color 0.3s ease, color 0.3s ease; /* Pour une transition douce */
 }
