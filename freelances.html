@@ -61,6 +61,17 @@ rel="stylesheet">
             </div>
         </section>
 
+        <section class="filter-bar py-4">
+            <div class="container text-center">
+                <div class="d-flex flex-wrap justify-content-center gap-2">
+                    <button type="button" class="btn btn-outline-primary filter-btn active" data-filter="all">Tous</button>
+                    <button type="button" class="btn btn-outline-primary filter-btn" data-filter="competences">Compétences</button>
+                    <button type="button" class="btn btn-outline-primary filter-btn" data-filter="tests">Tests</button>
+                    <button type="button" class="btn btn-outline-primary filter-btn" data-filter="suivi">Suivi</button>
+                </div>
+            </div>
+        </section>
+
        
              <!-- 2. GRILLE CONFIGURÉE (col-12 mobile, col-md-6 tablette, col-lg-4 desktop) -->
              
@@ -69,7 +80,7 @@ rel="stylesheet">
                 <div class="row g-4">
                     
                     <!-- Fonctionnalité 1 -->
-                    <article class="col-12 col-md-6 col-lg-4">
+                    <article class="col-12 col-md-6 col-lg-4" data-category="competences">
                         <div class="feature-card h-100">
                             <div class="feature-img-wrapper">
                                 <img src="images.afri/images (9).jpg" alt="Compétences techniques et comportementales">
@@ -82,7 +93,7 @@ rel="stylesheet">
                     </article>
                     
                     <!-- Fonctionnalité 2 -->
-                    <article class="col-12 col-md-6 col-lg-4">
+                    <article class="col-12 col-md-6 col-lg-4" data-category="tests">
                         <div class="feature-card h-100">
                             <div class="feature-img-wrapper">
                                 <img src="images.afri/images (10).jpg" alt="Tests de compétences intégrés">
@@ -95,7 +106,7 @@ rel="stylesheet">
                     </article>
                     
                     <!-- Fonctionnalité 3 -->
-                    <article class="col-12 col-md-6 col-lg-4">
+                    <article class="col-12 col-md-6 col-lg-4" data-category="suivi">
                         <div class="feature-card h-100">
                             <div class="feature-img-wrapper">
                                 <img src="images.afri/images (11).jpg" alt="Suivi des performances">

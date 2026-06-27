@@ -2469,3 +2469,42 @@ body {
     min-width: 3ch;
 }
 
+/* ==========================================================================
+   FORMULAIRES ET FILTRAGE (COMMIT 8)
+   ========================================================================== */
+
+/* Style pour les messages d'erreur sous les inputs */
+.error-message {
+    color: #dc3545; /* Rouge Bootstrap */
+    font-size: 0.85rem;
+    margin-top: 0.25rem;
+    display: none; /* Masqué par défaut, géré par le JS */
+}
+
+/* Style de bordure rouge Bootstrap quand le champ a une erreur */
+.form-control.is-invalid {
+    border-color: #dc3545;
+    background-image: url("data:image/svg+xml,%3csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 12 12' width='12' height='12' fill='none' stroke='%23dc3545'%3e%3ccircle cx='6' cy='6' r='4.5' stroke-dasharray='4 0'/%3e%3cpath stroke-width='2' stroke-linecap='round' d='M6 3v3.5M6 9h.01'/%3e%3c/svg%3e");
+    background-repeat: no-repeat;
+    background-position: right calc(0.375em + 0.1875rem) center;
+    background-size: calc(0.75em + 0.375rem) calc(0.75em + 0.375rem);
+}
+
+/* Style pour l'alerte de succès */
+.alert-success-custom {
+    color: #0f5132;
+    background-color: #d1e7dd;
+    border: 1px solid #badbcc;
+    padding: 1rem;
+    border-radius: 0.375rem;
+    margin-bottom: 1.5rem;
+    display: none; /* Masqué par défaut, géré par le JS */
+}
+
+/* Amélioration visuelle pour les boutons de filtrage */
+.filter-btn.active {
+    background-color: #0d6efd !important; /* Bleu Bootstrap actif */
+    color: #fff !important;
+    border-color: #0d6efd !important;
+}
+
