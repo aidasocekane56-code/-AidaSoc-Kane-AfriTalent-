@@ -1,10 +1,25 @@
+/*
+    css/style.css
+    Core styling for AfriTalent demo site.
+
+    Sections:
+    1. Variables and typography
+    2. Base reset and layout
+    3. Header and navigation
+    4. Hero and main page areas
+    5. Card layout and featured sections
+    6. Footer and global utilities
+*/
+
 :root {
     --primary-color: #0d6efd;
     --dark-color: #212529;
     --light-color: #f8f9fa;
     --text-muted: #6c757d;
+    --nav-height: 80px;
 }
 
+/* Base reset and typography */
 body {
     font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
     color: var(--dark-color);
@@ -12,6 +27,16 @@ body {
     margin: 0;
     padding: 0;
     line-height: 1.6;
+}
+
+/* Reserve space for the fixed/sticky header to prevent content overlap.
+   This avoids needing manual spacer divs in HTML and is non-destructive. */
+:root {
+    --nav-height: 80px;
+}
+
+main {
+    padding-top: var(--nav-height);
 }
 
 /* les grandes sections */
@@ -2469,9 +2494,9 @@ body {
     min-width: 3ch;
 }
 
-/* ==========================================================================
-   FORMULAIRES ET FILTRAGE (COMMIT 8)
-   ========================================================================== */
+
+   /* FORMULAIRES ET FILTRAGE (COMMIT 8) */
+  
 
 /* Style pour les messages d'erreur sous les inputs */
 .error-message {

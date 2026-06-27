@@ -106,9 +106,9 @@ document.addEventListener('DOMContentLoaded', () => {
 
     fadeSections.forEach(section => fadeObserver.observe(section));
 });
-// ==========================================
-// 1. FILTRAGE DYNAMIQUE DES FREELANCES (freelances.html)
-// ==========================================
+
+//  1. FILTRAGE DYNAMIQUE DES FREELANCES (freelances.html)
+
 const filterButtons = document.querySelectorAll('.filter-btn');
 const freelanceCards = document.querySelectorAll('.freelance-card');
 
@@ -138,9 +138,9 @@ if (filterButtons.length > 0 && freelanceCards.length > 0) {
     });
 }
 
-// ==========================================
+
 // 2. VALIDATION DU FORMULAIRE DE CONTACT (contact.html)
-// ==========================================
+
 const contactForm = document.getElementById('contact-form');
 
 if (contactForm) {
